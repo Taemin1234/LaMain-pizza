@@ -2844,7 +2844,7 @@ header.masthead .masthead-heading {
   opacity: 0.3;
 }
 
-/* 이벤트 */
+/* 라망피자소개 */
 .event-info-wrap {
   display: flex;
   flex-direction: column;
@@ -2852,30 +2852,30 @@ header.masthead .masthead-heading {
   justify-content: center;
   align-items: center;
 }
+
 .event-info {
-  width: 27rem;
-  margin: 0 5px 20px;
-  background-color: #fff;
+  width: 80%;
 }
-.event-img {
-  width: 100%;
-  height: 66.66%;
-}
-.event-img img {
-  width: 100%;
-  height: 100%;
-}
-.event-txt {
-  margin-top: 10px;
-  padding: 5px 30px;
-}
-.event-txt h4 {
-  margin-top: 10px;
-}
+
 @media (min-width: 768px) {
   .event-info {
-    width: 33rem;
-    margin: 0 5px 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    width: 90%;
+
+    margin-bottom: 20px;
+  }
+  .event-info iframe,
+  .event-info object,
+  .event-info embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -2887,13 +2887,23 @@ header.masthead .masthead-heading {
     align-items: center;
   }
   .event-info {
-    width: 18rem;
-    height: 550px;
-  }
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    width: 500px;
 
-  .event-img {
+    margin-bottom: 20px;
+  }
+  .event-info iframe,
+  .event-info object,
+  .event-info embed {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 18rem;
+    height: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -3111,7 +3121,56 @@ section#team form#contactForm :-ms-input-placeholder {
   }
 }
 
+/* 예약하기 바로가기 */
+.reservation-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(to left, #fecb72, #ffc800);
+  color: #fff;
+}
+
+.reservation-fixed a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 30px;
+
+  text-align: center;
+  line-height: 60px;
+}
+
+.reservation-fixed a:hover,
+.reservation-fixed a:active {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .reservation-fixed {
+    width: 136px;
+    height: 60px;
+
+    right: 30px;
+    bottom: 30px;
+
+    border-radius: 25px;
+    box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+  }
+
+  .reservation-fixed a {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
 .footer {
+  padding-bottom: 60px;
   text-align: center;
   font-size: 0.9rem;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

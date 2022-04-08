@@ -2899,7 +2899,7 @@ header.masthead .masthead-heading {
 @media (min-width: 1200px) {
   .event-info {
     width: 22rem;
-    height: 580px;
+    height: 600px;
   }
 
   .event-img {
@@ -2910,7 +2910,7 @@ header.masthead .masthead-heading {
 @media (min-width: 1400px) {
   .event-info {
     width: 26rem;
-    height: 620px;
+    height: 650px;
   }
 
   .event-img {

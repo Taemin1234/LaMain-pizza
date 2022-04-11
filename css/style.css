@@ -11,7 +11,7 @@
 :root {
   --main-color: #21515b;
   --main-color2: #27565f;
-  --theme-color: #fecb72;
+  --theme-color: #fdc462;
   --bs-primary: #ffc800;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -1951,7 +1951,7 @@ textarea.form-control.is-invalid {
 }
 .text-muted2 {
   --bs-text-opacity: 1;
-  color: #fff !important;
+  color: #000 !important;
 }
 .text-white-50 {
   --bs-text-opacity: 1;
@@ -2552,10 +2552,10 @@ p {
 }
 .page-section {
   padding: 6rem 0;
-  background-color: var(--main-color);
+  background-color: #fff;
 }
 .page-bg {
-  background-color: var(--main-color2);
+  background-color: #eeeeee;
 }
 .page-section .section-heading.h2,
 .page-section h2.section-heading {
@@ -2626,7 +2626,8 @@ p {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -2652,6 +2653,7 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
+    color: #ffffff;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -2667,18 +2669,38 @@ p {
     margin-right: 0;
   }
 }
-header.masthead {
+.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
-  background-image: url(../img/header-bg.jpg);
+  color: #000;
+
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
-header.masthead .masthead-subheading {
+.masthead-first {
+  background-image: url(../img/main/main2.jpg);
+}
+
+.masthead-second {
+  background-image: url(../img/main/main1.jpg);
+}
+
+.masthead-third {
+  background-image: url(../img/main/main2.jpg);
+}
+
+.masthead-fourth {
+  background-image: url(../img/main/main3.jpg);
+}
+
+.masthead-fifth {
+  background-image: url(../img/main/main1.jpg);
+}
+
+.masthead .masthead-subheading {
   font-size: 1.5rem;
   line-height: 1.5rem;
   margin-bottom: 25px;
@@ -2686,7 +2708,7 @@ header.masthead .masthead-subheading {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-header.masthead .masthead-heading {
+.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;
@@ -2696,16 +2718,16 @@ header.masthead .masthead-heading {
     "Segoe UI Symbol", "Noto Color Emoji";
 }
 @media (min-width: 768px) {
-  header.masthead {
+  .masthead {
     padding-top: 17rem;
     padding-bottom: 12.5rem;
   }
-  header.masthead .masthead-subheading {
+  .masthead .masthead-subheading {
     font-size: 2.25rem;
     line-height: 2.25rem;
     margin-bottom: 2rem;
   }
-  header.masthead .masthead-heading {
+  .masthead .masthead-heading {
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.5rem;
@@ -2845,36 +2867,25 @@ header.masthead .masthead-heading {
 }
 
 /* 라망피자소개 */
-.event-info-wrap {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 
 .event-info {
   width: 80%;
+  height: 300px;
+  margin: 10px auto;
+}
+
+.event-info iframe {
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   .event-info {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+    height: 360px;
     width: 90%;
 
     margin-bottom: 20px;
   }
-  .event-info iframe,
-  .event-info object,
-  .event-info embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .event-info iframe {
     height: 100%;
   }
 }
@@ -2883,33 +2894,22 @@ header.masthead .masthead-heading {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
-  .event-info {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    width: 500px;
 
-    margin-bottom: 20px;
+  .event-info {
+    height: 280px;
+    width: 48%;
   }
-  .event-info iframe,
-  .event-info object,
-  .event-info embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .event-info iframe {
     height: 100%;
   }
 }
 @media (min-width: 1200px) {
   .event-info {
-    width: 22rem;
-    height: 600px;
+    width: 48%;
+    height: 384px;
   }
 
   .event-img {
@@ -2919,13 +2919,13 @@ header.masthead .masthead-heading {
 }
 @media (min-width: 1400px) {
   .event-info {
-    width: 26rem;
-    height: 650px;
+    width: 48%;
+    height: 430px;
   }
 
   .event-img {
     width: 100%;
-    height: 26rem;
+    height: 100%;
   }
 }
 .img-brand {
@@ -3176,4 +3176,68 @@ section#team form#contactForm :-ms-input-placeholder {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+
+  background-color: #212529;
+  color: #fff;
+}
+
+/* 슬릭 슬라이더 */
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  /* 기본 글씨를 사라지게 하기 위해 설정, 대신 넣은 화살표도 사라진다. 화살표 크기를 크게 한다. */
+  font-size: 0;
+  color: transparent;
+
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}
+
+/* 아래 점 커스텀 */
+.slick-dots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  height: 20px;
+  position: absolute;
+  margin: 0 auto;
+
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots li {
+  margin: 0 10px;
+}
+
+.slick-dots li::marker {
+  color: transparent;
+}
+
+.slick-dots li button {
+  color: transparent;
+  border: none;
+  padding: 0;
+  background-color: grey;
+  opacity: 0.5;
+  border-radius: 50%;
+
+  height: 13px;
+  width: 13px;
+}
+
+.slick-dots .slick-active button {
+  background-color: #ffffff;
+  opacity: 1;
 }

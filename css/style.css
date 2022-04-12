@@ -62,7 +62,7 @@
   }
 }
 .main-font-color {
-  color: var(--theme-color);
+  color: #000;
 }
 body {
   margin: 0;
@@ -286,6 +286,7 @@ textarea {
 .img-main-fluid {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .container,
 .container-fluid,
@@ -2635,8 +2636,8 @@ p {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.95rem;
-  color: #000;
+  font-size: 1.2rem;
+  color: #fff;
   font-weight: bold;
   letter-spacing: 0.0625em;
 }
@@ -2662,8 +2663,10 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
-    color: #ffffff;
+    background-color: #fff;
+    color: #000;
+
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.49);
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -2683,7 +2686,7 @@ p {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #000;
+  color: #fff;
 
   background-repeat: no-repeat;
   background-attachment: scroll;

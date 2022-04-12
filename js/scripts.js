@@ -16,10 +16,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     if (window.scrollY === 0) {
       navbarCollapsible.classList.remove("navbar-shrink");
-      $(".nav-link").css("color", "#000");
+      $(".nav-link").css("color", "#fff");
     } else {
       navbarCollapsible.classList.add("navbar-shrink");
-      $(".nav-link").css("color", "#fff");
+      $(".nav-link").css("color", "#000");
     }
   };
 

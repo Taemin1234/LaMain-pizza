@@ -3144,6 +3144,7 @@ section#team form#contactForm :-ms-input-placeholder {
 }
 
 /* 예약하기 바로가기 */
+
 .reservation-fixed {
   position: fixed;
   bottom: 0;
@@ -3185,6 +3186,8 @@ section#team form#contactForm :-ms-input-placeholder {
 
     border-radius: 25px;
     box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+
+    transition: all 1s;
   }
 
   .reservation-fixed a {

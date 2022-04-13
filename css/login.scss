@@ -25,14 +25,14 @@ $theme-color: #fdc462;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 245px;
-  height: 336px;
+  width: 300px;
+  height: 400px;
   padding: 15px;
 
   border: solid 2px rgb(133, 131, 131);
   border-radius: 3px;
 
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.9);
 }
 
 .login_box {
@@ -49,11 +49,11 @@ $theme-color: #fdc462;
     position: absolute;
     display: flex;
     border-radius: 3px;
-    background: #eed821;
+    background: #f2da00;
     padding: 3% 2%;
     width: 80%;
     height: 25px;
-    top: 65%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -71,6 +71,11 @@ $theme-color: #fdc462;
   width: 100%;
   height: 33%;
   box-sizing: border-box;
+
+  text-align: center;
+}
+.customer-center p {
+  margin: 4px 0;
 }
 
 .login_copy {
@@ -93,7 +98,9 @@ $theme-color: #fdc462;
     width: 100%;
     height: 100%;
   }
+}
 
+@media (min-width: 992px) {
   .login-wrap {
     position: absolute;
     top: 50%;

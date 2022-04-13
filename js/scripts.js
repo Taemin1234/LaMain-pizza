@@ -63,6 +63,7 @@ $(function () {
   });
 });
 
+//메뉴바 설정
 $(function () {
   var idx;
   $(".nav-item").mouseover(function () {

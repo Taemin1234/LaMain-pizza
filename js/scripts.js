@@ -62,3 +62,23 @@ $(function () {
     adaptiveHeight: true,
   });
 });
+
+$(function () {
+  var idx;
+  $(".nav-item").mouseover(function () {
+    idx = $(this).index();
+    $(".nav-link").eq(idx).css("color", "#ffc800");
+  });
+});
+
+$(function () {
+  var idx;
+  $(".nav-item").mouseout(function () {
+    idx = $(this).index();
+    if ($("#mainNav").hasClass("navbar-shrink") == true) {
+      $(".nav-link").eq(idx).css("color", "#000000");
+    } else {
+      $(".nav-link").eq(idx).css("color", "#ffffff");
+    }
+  });
+});

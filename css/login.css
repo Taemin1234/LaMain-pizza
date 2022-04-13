@@ -364,6 +364,7 @@ template {
   border: solid 2px rgb(133, 131, 131);
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.9);
+  transition: all 1s;
 }
 
 .login_box {
@@ -432,5 +433,6 @@ template {
     top: 50%;
     left: 65%;
     transform: translateY(-50%);
+    transition: all 1s;
   }
 }

@@ -2895,9 +2895,16 @@ p {
 }
 
 @media (min-width: 768px) {
+  .event-info-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .event-info {
-    height: 360px;
-    width: 90%;
+    height: 320px;
+    width: 48%;
 
     margin-bottom: 20px;
   }
@@ -2935,8 +2942,8 @@ p {
 }
 @media (min-width: 1400px) {
   .event-info {
-    width: 48%;
-    height: 430px;
+    width: 30%;
+    height: 320px;
   }
 
   .event-img {
@@ -3178,20 +3185,20 @@ section#team form#contactForm :-ms-input-placeholder {
 
 @media (min-width: 768px) {
   .reservation-fixed {
-    width: 136px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
 
     right: 30px;
     bottom: 30px;
 
-    border-radius: 25px;
+    border-radius: 50%;
     box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
 
-    transition: all 1s;
+    transition: all 0.4s;
   }
 
   .reservation-fixed a {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
   }
 
@@ -3201,8 +3208,12 @@ section#team form#contactForm :-ms-input-placeholder {
     background-color: #fff;
     color: var(--theme-color);
 
-    border-radius: 25px;
+    border-radius: 50%;
     box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+  }
+
+  .reserv-text {
+    margin-top: 55px;
   }
 }
 
@@ -3234,31 +3245,8 @@ section#team form#contactForm :-ms-input-placeholder {
   height: 71px;
   border-radius: 50%;
   background: transparent;
-  background: rgba(0, 0, 0, 0.5);
+
   border: none;
-}
-
-.slick-prev {
-  left: 25px;
-}
-
-/* font를 html로 넣기 힘들때 css로 넣을 때 사용 */
-.slick-prev:before {
-  content: "\f104";
-  font-family: "FontAwesome";
-  color: #ffffff;
-  font-size: 45px;
-}
-
-.slick-next {
-  right: 25px;
-}
-
-.slick-next:before {
-  content: "\f105";
-  color: #ffffff;
-  font-size: 45px;
-  font-family: "FontAwesome";
 }
 
 /* 아래 점 커스텀 */
@@ -3301,4 +3289,33 @@ section#team form#contactForm :-ms-input-placeholder {
 .slick-dots .slick-active button {
   background-color: #ffffff;
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .slick-arrow {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .slick-prev {
+    left: 25px;
+  }
+
+  /* font를 html로 넣기 힘들때 css로 넣을 때 사용 */
+  .slick-prev:before {
+    content: "\f104";
+    font-family: "FontAwesome";
+    color: #ffffff;
+    font-size: 45px;
+  }
+
+  .slick-next {
+    right: 25px;
+  }
+
+  .slick-next:before {
+    content: "\f105";
+    color: #ffffff;
+    font-size: 45px;
+    font-family: "FontAwesome";
+  }
 }

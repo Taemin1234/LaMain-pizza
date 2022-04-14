@@ -24,6 +24,15 @@ button {
   background: transparent;
 }
 
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
 .login_box .login_kakao a {
   display: flex;
   flex-direction: row;
@@ -35,9 +44,9 @@ button {
 
 .main-contents {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -88,6 +97,7 @@ a {
 }
 .login_box .login-title {
   text-align: center;
+  margin-top: 20px;
 }
 .login_box .login_kakao {
   position: absolute;
@@ -112,8 +122,12 @@ a {
 .customer-center {
   width: 100%;
   height: 33%;
+  padding: 20px;
   box-sizing: border-box;
   text-align: center;
+}
+.customer-center h4 {
+  margin-bottom: 15px;
 }
 
 .customer-center p {
@@ -141,19 +155,101 @@ a {
   }
 }
 .nav-bar {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
   width: 100%;
   height: 80px;
+  padding: 5px 30px;
+  margin-bottom: 20px;
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.main-logo img {
+  width: 70px;
+}
+
+.menu-wrap {
+  width: 80px;
+  border: solid 2px #000;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.menu-wrap:hover {
+  background-color: #000;
+  color: #fff;
+}
+.menu-wrap p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    display: inline-block;
+  }
+
+  .main-logo {
+    text-align: center;
+  }
+
+  .menu-wrap {
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+}
+.main-contents {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 80px;
 }
 
 .main-box {
-  width: 400px;
-  height: 600px;
-  margin-top: 90px;
+  width: 300px;
+  height: 300px;
+  margin: 20px 0;
   padding: 20px;
   border: solid 1px #000;
+  border-radius: 3px;
+  text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .main-box h2 {
   text-align: center;
+}
+.main-box img {
+  width: 130px;
+  height: 130px;
+  margin-top: 42px;
+}
+
+.footer {
+  width: 100%;
+  height: 160px;
+  padding-top: 10px;
+  padding-bottom: 70px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #212529;
+  color: #fff;
+}
+
+.footer-contents {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .footer-fixed {
+    position: fixed;
+    bottom: 0px;
+  }
 }

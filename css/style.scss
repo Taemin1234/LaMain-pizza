@@ -243,7 +243,7 @@ a {
 .reserv-page {
   position: fixed;
   top: 80px;
-  width: 483px;
+  width: 500px;
   height: 100%;
 
   z-index: 5;
@@ -272,6 +272,8 @@ a {
     font-size: 15px;
     margin-right: 25px;
     border: solid 1px #000;
+
+    cursor: pointer;
   }
 }
 .choice-calender {

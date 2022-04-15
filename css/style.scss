@@ -78,12 +78,6 @@ a {
   height: 100%;
 }
 
-.bg-opacity {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0, 0.4);
-}
-
 .login-wrap {
   position: absolute;
   top: 50%;
@@ -191,7 +185,7 @@ a {
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.14);
 
   box-sizing: border-box;
-  z-index: 5;
+  z-index: 10;
 }
 
 .main-logo {
@@ -201,23 +195,30 @@ a {
 }
 
 .menu-wrap {
-  width: 80px;
-  border: solid 2px #000;
-  border-radius: 3px;
+  @extend %flex-end;
+  .btn-userinfo {
+    margin-right: 10px;
 
-  padding: 5px;
-
-  cursor: pointer;
-  box-sizing: border-box;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
+    .userhead {
+      font-weight: bold;
+    }
   }
-
-  p {
+  .btn-logout {
     font-size: 16px;
     font-weight: bold;
+    width: 80px;
+    border: solid 2px #000;
+    border-radius: 3px;
+
+    padding: 5px;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
   }
 }
 
@@ -237,9 +238,195 @@ a {
     right: 25px;
   }
 }
-//메인페이지
 
-// 최대크기 1320px
+// 예약 페이지
+.reserv-page {
+  position: fixed;
+  top: 80px;
+  width: 483px;
+  height: 100%;
+
+  z-index: 5;
+
+  background-color: #fff;
+
+  box-sizing: border-box;
+}
+
+.reserv-page-title {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.reserv-top {
+  padding: 0 10px;
+
+  box-sizing: border-box;
+}
+
+.calender-month {
+  @extend %flex-center;
+  margin-bottom: 10px;
+
+  button {
+    font-size: 15px;
+    margin-right: 25px;
+    border: solid 1px #000;
+  }
+}
+.choice-calender {
+  @extend %flex-center;
+  font-size: 28px;
+
+  .choice {
+    margin: 0 25px;
+  }
+
+  .month-next,
+  .month-prev {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  .month-prev {
+    border-left: solid 2px #000;
+    border-bottom: solid 2px #000;
+    transform: rotate(45deg);
+  }
+
+  .month-next {
+    border-right: solid 2px #000;
+    border-top: solid 2px #000;
+    transform: rotate(45deg);
+  }
+}
+
+.reserv-school {
+  @extend %flex-center;
+  margin: 20px 0;
+
+  .reserv-school-title {
+    font-weight: bold;
+  }
+
+  p {
+    margin-right: 10px;
+  }
+
+  .sort-school {
+    @extend %flex-center;
+  }
+}
+
+.calender-head {
+  width: 100%;
+
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #eee;
+  box-sizing: border-box;
+
+  ul {
+    @extend %flex-between;
+    box-sizing: border-box;
+    border-right: solid 1px #ddd;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+
+    padding-top: 14px;
+
+    border-left: solid 1px #ddd;
+
+    box-sizing: border-box;
+  }
+}
+
+.calender-contents {
+  width: 100%;
+  .week-container {
+    @extend %flex-between;
+    width: 100%;
+    height: 120px;
+
+    box-sizing: border-box;
+  }
+
+  li {
+    @extend %flex-column;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    padding: 5px;
+
+    border: solid 1px #ddd;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .date-wrap {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 0;
+
+      font-size: 18px;
+      box-sizing: border-box;
+
+      .date {
+        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    .book-box {
+      height: 80px;
+      margin-top: 5px;
+
+      img {
+        width: 50px;
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: bold;
+
+        text-align: center;
+      }
+    }
+
+    .full-book {
+      .soldout-alert {
+        display: flex;
+        height: 50px;
+        font-size: 16px;
+        color: red;
+
+        align-items: center;
+      }
+
+      p {
+        color: rgb(92, 91, 91);
+      }
+    }
+  }
+}
+
+@media (min-width: 621px) {
+  .reserv-page {
+    width: 620px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+//메인페이지
 
 .main-contents {
   @extend %flex-column;
@@ -276,6 +463,10 @@ a {
 
 // 캘린더 사이트
 //http://querenciapoolvilla.com/reserve.html?reserve=rv
+
+// js도 포함
+//https://rev.yapen.co.kr/external?ypIdx=19892
+//http://100enjoy.co.kr/theme/type14/reserve.php
 
 // @media (min-width: 992px) {
 //   .main-contents {

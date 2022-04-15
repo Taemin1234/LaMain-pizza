@@ -24,7 +24,16 @@ button {
   background: transparent;
 }
 
-.nav-bar {
+.menu-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.calender-contents .week-container, .calender-head ul, .nav-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -33,7 +42,7 @@ button {
   align-content: center;
 }
 
-.login_box .login_kakao a {
+.reserv-school .sort-school, .reserv-school, .choice-calender, .calender-month, .login_box .login_kakao a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -42,7 +51,7 @@ button {
   align-content: flex-start;
 }
 
-.main-contents {
+.main-contents, .calender-contents li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -68,12 +77,6 @@ a {
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
-}
-
-.bg-opacity {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .login-wrap {
@@ -164,14 +167,22 @@ a {
   margin-bottom: 20px;
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.14);
   box-sizing: border-box;
-  z-index: 5;
+  z-index: 10;
 }
 
 .main-logo img {
   width: 70px;
 }
 
-.menu-wrap {
+.menu-wrap .btn-userinfo {
+  margin-right: 10px;
+}
+.menu-wrap .btn-userinfo .userhead {
+  font-weight: bold;
+}
+.menu-wrap .btn-logout {
+  font-size: 16px;
+  font-weight: bold;
   width: 80px;
   border: solid 2px #000;
   border-radius: 3px;
@@ -179,13 +190,9 @@ a {
   cursor: pointer;
   box-sizing: border-box;
 }
-.menu-wrap:hover {
+.menu-wrap .btn-logout:hover {
   background-color: #000;
   color: #fff;
-}
-.menu-wrap p {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -202,6 +209,147 @@ a {
     position: absolute;
     top: 20px;
     right: 25px;
+  }
+}
+.reserv-page {
+  position: fixed;
+  top: 80px;
+  width: 483px;
+  height: 100%;
+  z-index: 5;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.reserv-page-title {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.reserv-top {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.calender-month {
+  margin-bottom: 10px;
+}
+.calender-month button {
+  font-size: 15px;
+  margin-right: 25px;
+  border: solid 1px #000;
+}
+
+.choice-calender {
+  font-size: 28px;
+}
+.choice-calender .choice {
+  margin: 0 25px;
+}
+.choice-calender .month-next,
+.choice-calender .month-prev {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.choice-calender .month-prev {
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;
+  transform: rotate(45deg);
+}
+.choice-calender .month-next {
+  border-right: solid 2px #000;
+  border-top: solid 2px #000;
+  transform: rotate(45deg);
+}
+
+.reserv-school {
+  margin: 20px 0;
+}
+.reserv-school .reserv-school-title {
+  font-weight: bold;
+}
+.reserv-school p {
+  margin-right: 10px;
+}
+.calender-head {
+  width: 100%;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #eee;
+  box-sizing: border-box;
+}
+.calender-head ul {
+  box-sizing: border-box;
+  border-right: solid 1px #ddd;
+  width: 100%;
+  text-align: center;
+}
+.calender-head li {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  padding-top: 14px;
+  border-left: solid 1px #ddd;
+  box-sizing: border-box;
+}
+
+.calender-contents {
+  width: 100%;
+}
+.calender-contents .week-container {
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+}
+.calender-contents li {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  padding: 5px;
+  border: solid 1px #ddd;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.calender-contents li .date-wrap {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 0;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+.calender-contents li .date-wrap .date {
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+}
+.calender-contents li .book-box {
+  height: 80px;
+  margin-top: 5px;
+}
+.calender-contents li .book-box img {
+  width: 50px;
+}
+.calender-contents li .book-box p {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+.calender-contents li .full-book .soldout-alert {
+  display: flex;
+  height: 50px;
+  font-size: 16px;
+  color: red;
+  align-items: center;
+}
+.calender-contents li .full-book p {
+  color: rgb(92, 91, 91);
+}
+
+@media (min-width: 621px) {
+  .reserv-page {
+    width: 620px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .main-contents {

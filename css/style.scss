@@ -1,5 +1,7 @@
 $main-color: #21515b;
 $theme-color: #fdc462;
+$border-color: #ddd;
+$sub-color: #5c5b5b;
 
 @use "./normalize.css";
 
@@ -239,8 +241,11 @@ a {
   }
 }
 
-// 예약 페이지
+// 예약 달력 페이지
+// 이 모달이 열리면 뒷 스크롤을 막아야한다.
+
 .reserv-page {
+  display: none;
   position: fixed;
   top: 80px;
   width: 500px;
@@ -251,6 +256,24 @@ a {
   background-color: #fff;
 
   box-sizing: border-box;
+
+  .close-btn {
+    position: absolute;
+    right: 45px;
+    top: 28px;
+
+    width: 25px;
+    height: 40px;
+
+    border: solid 2px #000;
+
+    font-size: 32px;
+
+    text-align: center;
+    line-height: 40px;
+
+    cursor: pointer;
+  }
 }
 
 .reserv-page-title {
@@ -269,6 +292,8 @@ a {
   margin-bottom: 10px;
 
   button {
+    width: 40px;
+    height: 30px;
     font-size: 15px;
     margin-right: 25px;
     border: solid 1px #000;
@@ -303,6 +328,12 @@ a {
     transform: rotate(45deg);
   }
 }
+.blank {
+  width: 40px;
+  height: 30px;
+
+  margin-left: 25px;
+}
 
 .reserv-school {
   @extend %flex-center;
@@ -324,17 +355,19 @@ a {
 .calender-head {
   width: 100%;
 
-  border-top: solid 1px #ddd;
-  border-bottom: solid 1px #eee;
+  border-top: solid 2px $border-color;
+  border-bottom: solid 2px #eee;
   box-sizing: border-box;
 
   ul {
     @extend %flex-between;
     box-sizing: border-box;
-    border-right: solid 1px #ddd;
+    border-right: solid 2px $border-color;
 
     width: 100%;
     text-align: center;
+
+    box-sizing: border-box;
   }
 
   li {
@@ -344,7 +377,7 @@ a {
 
     padding-top: 14px;
 
-    border-left: solid 1px #ddd;
+    border-left: solid 2px $border-color;
 
     box-sizing: border-box;
   }
@@ -352,6 +385,7 @@ a {
 
 .calender-contents {
   width: 100%;
+
   .week-container {
     @extend %flex-between;
     width: 100%;
@@ -367,7 +401,7 @@ a {
     height: 100%;
     padding: 5px;
 
-    border: solid 1px #ddd;
+    border: solid 1px $border-color;
 
     box-sizing: border-box;
     overflow: hidden;
@@ -403,6 +437,14 @@ a {
       }
     }
 
+    .rest-book {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
     .full-book {
       .soldout-alert {
         display: flex;
@@ -418,6 +460,13 @@ a {
       }
     }
   }
+}
+
+.reserv-click-btn {
+  width: 100%;
+  height: 80px;
+
+  background-color: #000;
 }
 
 @media (min-width: 621px) {
@@ -463,20 +512,164 @@ a {
   }
 }
 
-// 캘린더 사이트
-//http://querenciapoolvilla.com/reserve.html?reserve=rv
+// 예약 상세 페이지
 
-// js도 포함
-//https://rev.yapen.co.kr/external?ypIdx=19892
-//http://100enjoy.co.kr/theme/type14/reserve.php
+main {
+  padding-top: 80px;
+}
 
-// @media (min-width: 992px) {
-//   .main-contents {
-//     @extend %flex-between;
-//     max-width: 1320px;
-//     margin: 0 auto;
-//   }
-// }
+.food-img-wrap {
+  width: 500px;
+  height: 400px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+//슬릭 점 커스텀
+.slick-dots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  height: 20px;
+  position: absolute;
+  margin: 0 auto;
+
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots li {
+  margin: 0 10px;
+}
+
+.slick-dots li::marker {
+  color: transparent;
+}
+
+.slick-dots li button {
+  color: transparent;
+  border: none;
+  padding: 0;
+  background-color: grey;
+  opacity: 0.5;
+  border-radius: 50%;
+
+  height: 13px;
+  width: 13px;
+}
+
+.slick-dots .slick-active button {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.order-detail-wrap {
+  width: 500px;
+
+  padding: 20px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  h2 {
+    padding-bottom: 10px;
+    border-bottom: solid 2px $border-color;
+  }
+}
+
+.menu-info {
+  margin-top: 12px;
+}
+
+.info-wrap {
+  @extend %flex-start;
+
+  p {
+    color: $sub-color;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  span {
+    padding-bottom: 10px;
+  }
+}
+
+.order-btn-wrap {
+  text-align: center;
+  margin: 20px auto;
+
+  button {
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: transparent;
+    border: solid 2px $border-color;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+}
+
+//피자 수량 선택 페이지
+.select-quantity-page {
+  width: 500px;
+
+  margin: 0 auto;
+}
+
+.select-quantity-wrap {
+  @extend %flex-between;
+  padding: 20px;
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.info-quantity {
+  padding-right: 10px;
+
+  .qunatity-input-wrap {
+    width: 100px;
+
+    margin-top: 20px;
+    padding: 3px;
+    border: solid 2px $border-color;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    input {
+      width: 50px;
+      height: 30px;
+
+      padding: 5px;
+
+      box-sizing: border-box;
+    }
+  }
+}
 
 // footer
 

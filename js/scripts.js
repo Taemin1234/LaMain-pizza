@@ -83,3 +83,41 @@ $(function () {
     }
   });
 });
+
+//예약 달력 페이지
+
+//피자 예약하기 클릭시 달력 페이지 나타나기
+
+$(function () {
+  $(".main-box")
+    .eq(0)
+    .on("click", function () {
+      $(".reserv-page").show();
+      $(".main-contents").hide();
+      $("footer").hide();
+    });
+});
+
+//피자 달력에서 x를 누르면 사라지기
+
+$(function () {
+  $(".close-btn").on("click", function () {
+    $(".reserv-page").hide();
+    $(".main-contents").show();
+    $("footer").show();
+  });
+});
+
+//예약 상세 페이지
+
+$(function () {
+  $(".food-img-wrap").slick({
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    arrows: false,
+  });
+});

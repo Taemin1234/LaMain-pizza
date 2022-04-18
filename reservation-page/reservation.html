@@ -16,6 +16,11 @@
       src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
       crossorigin="anonymous"
     ></script>
+    <!-- 폰트어썸 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+    />
     <!-- Google fonts-->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -42,7 +47,9 @@
     <header>
       <nav class="nav-bar">
         <div class="main-logo">
-          <img src="../img/logos/라망.png" alt="" />
+          <a href="../index.html">
+            <img src="../img/logos/라망.png" alt="" />
+          </a>
         </div>
 
         <div class="menu-wrap">
@@ -56,11 +63,12 @@
       </nav>
     </header>
 
-    <!-- 예약 페이지 -->
+    <!-- 예약 달력 페이지 -->
     <div class="reserv-page">
       <div class="reserv-page-title">
-        <h2>피자 예약 현황</h2>
+        <h1>피자 예약 현황</h1>
       </div>
+      <div class="close-btn">X</div>
       <div class="reserv-top">
         <div class="calender-month">
           <button>오늘</button>
@@ -72,13 +80,14 @@
             </div>
             <div class="month-next"></div>
           </div>
+          <div class="blank"></div>
         </div>
         <div class="reserv-school">
           <p class="reserv-school-title">예약 학교</p>
           <div class="sort-school">
-            <p>초등 : <span>03</span></p>
-            <p>중등 : <span>05</span></p>
-            <p>고등 : <span>04</span></p>
+            <p>● 초 (<span>03</span>)&nbsp;</p>
+            <p>● 중 (<span>05</span>)&nbsp;</p>
+            <p>● 고 (<span>04</span>)&nbsp;</p>
           </div>
         </div>
       </div>
@@ -100,8 +109,10 @@
               </div>
               <div class="rest-book book-box">
                 <img src="../img/pizza-truck-bw.png" alt="" />
-                <p>잔여</p>
-                <p><span class="rest-car">2 </span>/ 2</p>
+                <a href="../reservation-detail/reservation-detail.html">
+                  <p>잔여</p>
+                  <p><span class="rest-car">2 </span>/ 2</p>
+                </a>
               </div>
             </li>
             <li>
@@ -133,16 +144,6 @@
           <ul class="week-container">
             <li>
               <div class="date-wrap">
-                <span class="date">6</span>
-              </div>
-            </li>
-            <li>
-              <div class="date-wrap">
-                <span class="date">7</span>
-              </div>
-            </li>
-            <li>
-              <div class="date-wrap">
                 <span class="date">8</span>
               </div>
             </li>
@@ -156,8 +157,6 @@
                 <span class="date">10</span>
               </div>
             </li>
-          </ul>
-          <ul class="week-container">
             <li>
               <div class="date-wrap">
                 <span class="date">11</span>
@@ -168,19 +167,31 @@
                 <span class="date">12</span>
               </div>
             </li>
-            <li>
-              <div class="date-wrap">
-                <span class="date">13</span>
-              </div>
-            </li>
-            <li>
-              <div class="date-wrap">
-                <span class="date">14</span>
-              </div>
-            </li>
+          </ul>
+          <ul class="week-container">
             <li>
               <div class="date-wrap">
                 <span class="date">15</span>
+              </div>
+            </li>
+            <li>
+              <div class="date-wrap">
+                <span class="date">16</span>
+              </div>
+            </li>
+            <li>
+              <div class="date-wrap">
+                <span class="date">17</span>
+              </div>
+            </li>
+            <li>
+              <div class="date-wrap">
+                <span class="date">18</span>
+              </div>
+            </li>
+            <li>
+              <div class="date-wrap">
+                <span class="date">19</span>
               </div>
             </li>
           </ul>
@@ -231,5 +242,7 @@
         Copyright &copy LAMAIN Corp. All Rights Reserved
       </div>
     </footer>
+
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

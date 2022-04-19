@@ -121,3 +121,31 @@ $(function () {
     arrows: false,
   });
 });
+
+// 피자 수량 선택 페이지
+
+// 수량 증가, 감소
+$(function () {
+  $(".minus-amount").on("click", function (e) {
+    e.preventDefault();
+    var stat = $(".amount").val();
+    var num = parseInt(stat, 10);
+    num--;
+
+    if (num <= -1) {
+      alert("최소 수량은 0입니다.");
+      num = 0;
+    }
+
+    $(".amount").val(num);
+  });
+
+  $(".plus-amount").on("click", function (e) {
+    e.preventDefault();
+    var stat = $(".amount").val();
+    var num = parseInt(stat, 10);
+    num++;
+
+    $(".amount").val(num);
+  });
+});

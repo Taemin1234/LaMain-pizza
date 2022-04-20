@@ -57,9 +57,51 @@ $sub-color: #949292;
   align-items: center;
 }
 
+* {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 0;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
 }
 
 // 로그인 페이지
@@ -114,7 +156,7 @@ a {
     background: #f2da00;
     padding: 3% 2%;
     width: 80%;
-    height: 25px;
+    height: 47px;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -262,8 +304,8 @@ a {
     right: 30px;
     top: 32px;
 
-    width: 30px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 
     border: solid 2px #000;
 
@@ -292,7 +334,7 @@ a {
   margin-bottom: 10px;
 
   button {
-    width: 40px;
+    width: 44px;
     height: 30px;
     font-size: 15px;
     margin-right: 25px;
@@ -331,7 +373,7 @@ a {
   }
 }
 .blank {
-  width: 40px;
+  width: 44px;
   height: 30px;
 
   margin-left: 25px;
@@ -518,6 +560,25 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .main-contents {
+    display: block;
+    max-width: 700px;
+    height: 809px;
+    padding-left: 50px;
+  }
+
+  .main-box:nth-child(2),
+  .main-box:nth-child(4) {
+    float: right;
+  }
+
+  .main-box:nth-child(1),
+  .main-box:nth-child(3) {
+    float: left;
+  }
+}
+
 // 예약 상세 페이지
 
 main {
@@ -671,10 +732,18 @@ main {
   .standard-recommend {
     padding-top: 10px;
   }
+
+  .option-content {
+    color: #747272;
+    padding: 0;
+    margin: 0 5px;
+    opacity: 0.5;
+    font-weight: bold;
+  }
 }
 
 .select-quantity-wrap {
-  @extend %flex-between;
+  @extend %flex-start;
   padding-bottom: 10px;
   margin-bottom: 20px;
 
@@ -689,6 +758,7 @@ main {
 
 .info-quantity {
   padding-right: 10px;
+  margin-left: 20px;
 
   .quantity-input-wrap {
     width: 113px;

@@ -129,10 +129,9 @@ ol {
   transform: translate(-50%, -50%);
 
   width: 300px;
-  height: 400px;
+  height: 470px;
   padding: 15px;
 
-  border: solid 2px rgb(133, 131, 131);
   border-radius: 3px;
 
   background-color: rgb(255, 255, 255, 0.9);
@@ -145,9 +144,17 @@ ol {
 
   border-bottom: solid 2px rgb(133, 131, 131);
 
+  .login-logo {
+    text-align: center;
+
+    img {
+      width: 70px;
+    }
+  }
+
   .login-title {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .login_kakao {
     position: absolute;
@@ -157,7 +164,7 @@ ol {
     padding: 3% 2%;
     width: 80%;
     height: 47px;
-    top: 60%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -183,8 +190,12 @@ ol {
 
   text-align: center;
 
-  h4 {
+  h2 {
     margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }
 .customer-center p {
@@ -196,7 +207,7 @@ ol {
   width: 100%;
   text-align: center;
   left: 0;
-  bottom: 3%;
+  bottom: 18%;
   font-size: 80%;
 }
 
@@ -211,11 +222,20 @@ ol {
     width: 100%;
     height: 100%;
   }
+
+  .login-wrap {
+    width: 650px;
+    height: 490px;
+  }
+
+  .login_box {
+    .login_kakao {
+      width: 275px;
+    }
+  }
 }
 
-// 예약 페이지
-
-// 상단 메뉴바
+// 상단 헤더
 .nav-bar {
   @extend %flex-between;
   position: fixed;
@@ -233,6 +253,7 @@ ol {
 }
 
 .main-logo {
+  width: 80px;
   img {
     width: 70px;
   }
@@ -266,21 +287,23 @@ ol {
   }
 }
 
+.header-title {
+  display: none;
+}
+
 @media (min-width: 768px) {
-  .nav-bar {
-    display: inline-block;
+  .header-title {
+    display: flex;
+    width: 170px;
+    margin-left: 180px;
   }
+}
 
-  .main-logo {
-    text-align: center;
-  }
+// 예약 페이지
 
-  .menu-wrap {
-    float: right;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-  }
+.reserv-body-bg {
+  background-image: url(../img/main/main2.jpg);
+  object-fit: contain;
 }
 
 // 예약 달력 페이지
@@ -538,25 +561,47 @@ ol {
   width: 300px;
   height: 300px;
 
-  margin: 20px 0;
-  padding: 20px;
+  margin: 30px 0;
 
-  border: solid 1px #000;
-  border-radius: 3px;
+  background-color: #fff;
+
+  border: solid 1px $border-color;
+  border-radius: 20px;
 
   text-align: center;
 
   box-sizing: border-box;
   cursor: pointer;
 
-  h2 {
-    text-align: center;
+  transition: all 0.5s;
+
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+
+    transform: translateY(-10px);
+    transition: all 0.3s;
   }
 
   img {
-    width: 130px;
-    height: 130px;
-    margin-top: 42px;
+    width: 110px;
+    height: 110px;
+    margin: 20px 0;
+  }
+}
+
+.main-box-title {
+  width: 100%;
+  height: 50%;
+
+  //background-color: #c2c2c2;
+  background-color: $theme-color;
+
+  h2 {
+    text-align: center;
+    line-height: 148px;
   }
 }
 
@@ -833,6 +878,7 @@ main {
 
 .footer-contents {
   text-align: center;
+  line-height: 1.5;
 }
 
 @media (min-width: 992px) {

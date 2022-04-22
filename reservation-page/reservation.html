@@ -47,7 +47,7 @@
     <header>
       <nav class="nav-bar">
         <div class="main-logo">
-          <a href="../index.html">
+          <a href="./reservation.html">
             <img src="../img/logos/라망.png" alt="" />
           </a>
         </div>
@@ -56,14 +56,22 @@
 
         <div class="menu-wrap">
           <!-- 학교명, 학교 형태 구분  -->
-          <p class="btn-userinfo">
-            <span class="userhead">접속자 :</span>
-            <span>시지</span><span>초등학교</span>
-          </p>
+          <p class="btn-userinfo"><span>시지</span><span>초등학교</span>님</p>
           <p class="btn-logout">Log out</p>
+          <img src="../img/menu-icon.svg" alt="" class="btn-menu" />
         </div>
       </nav>
     </header>
+
+    <!-- 메뉴 슬라이드 -->
+    <div class="menu-slide-wrap">
+      <ul>
+        <li class="call-calendar">피자 예약하기</li>
+        <li><a href="#">내 예약 현황 보기</a></li>
+        <li><a href="#">샘플 주문하기</a></li>
+        <li><a href="#">학교정보관리</a></li>
+      </ul>
+    </div>
 
     <!-- 예약 달력 페이지 -->
     <div class="reserv-page">
@@ -248,40 +256,56 @@
       <div class="main-box">
         <img src="../img/pizza-truck.png" alt="" />
         <div class="main-box-title">
-          <h2>피자 예약하기</h2>
+          <h3>피자 예약하기</h3>
         </div>
       </div>
       <div class="main-box">
-        <img src="../img/calender.png" alt="" />
+        <img src="../img/calendar.png" alt="" />
         <div class="main-box-title">
-          <h2>내 예약현황 보기</h2>
+          <h3>내 예약현황 보기</h3>
+        </div>
+      </div>
+      <div class="main-box">
+        <img src="../img/pizza-slice.png" alt="" />
+        <div class="main-box-title">
+          <h3>샘플주문하기</h3>
         </div>
       </div>
       <div class="main-box">
         <img src="../img/user.png" alt="" />
         <div class="main-box-title">
-          <h2>샘플주문하기</h2>
-        </div>
-      </div>
-      <div class="main-box">
-        <img src="../img/user.png" alt="" />
-        <div class="main-box-title">
-          <h2>학교정보관리</h2>
+          <h3>학교정보관리</h3>
         </div>
       </div>
     </main>
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer-contents">
-        페이잇 주식회사<br />
-        대표 &nbsp;:&nbsp; 박진성<br />
-        주소&nbsp;:&nbsp; 경상북도 경산시 대학로 280, 창업보육센터 신관
-        212호(대동, 영남대학교)
-        <br />사업자번호 &nbsp;:&nbsp; 176-88-01702<br />
-        통신판매업번호 &nbsp;:&nbsp; 제2021-대구수성구-0014호<br />
-        Copyright &copy Payeat Corp. All Rights Reserved
+      <div class="fnb">
+        <ul>
+          <li><a>이용약관</a></li>
+          <li><a>개인정보처리방침</a></li>
+        </ul>
       </div>
+      <div class="footer-web">
+        <div class="footer-contents">
+          페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
+          주소: 경상북도 경산시 대학로 280, 창업보육센터 신관 212호(대동,
+          영남대학교)
+          <br />사업자번호 : 176-88-01702<br />
+          통신판매업번호 : 제2021-대구수성구-0014호
+        </div>
+        <div class="footer-cs">
+          <p>Contact</p>
+          <ul>
+            <li>전화 : 1544-5202</li>
+            <li>팩스 : 0504-390-7321</li>
+            <li>이메일 : help@payeat.co.kr</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
     </footer>
 
     <script src="../js/scripts.js"></script>

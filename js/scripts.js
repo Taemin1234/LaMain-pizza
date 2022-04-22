@@ -63,7 +63,7 @@ $(function () {
   });
 });
 
-//메뉴바 설정
+//소개 페이지 메뉴바 설정
 $(function () {
   var idx;
   $(".nav-item").mouseover(function () {
@@ -81,6 +81,13 @@ $(function () {
     } else {
       $(".nav-link").eq(idx).css("color", "#ffffff");
     }
+  });
+});
+
+//예약 시스템 메뉴 바 설정
+$(function () {
+  $(".btn-menu").on("click", function () {
+    $(".menu-slide-wrap").toggle();
   });
 });
 

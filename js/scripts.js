@@ -105,10 +105,10 @@ $(function () {
     });
 });
 
-//피자 달력에서 x를 누르면 사라지기
+//피자 달력에서 <를 누르면 사라지기
 
 $(function () {
-  $(".close-btn").on("click", function () {
+  $(".calender-close-btn").on("click", function () {
     $(".reserv-page").hide();
     $(".main-contents").show();
     $("footer").show();
@@ -130,6 +130,21 @@ $(function () {
 });
 
 // 피자 수량 선택 페이지
+
+//주문하러가기 클릭시 주문창 슬라이드업
+$(function () {
+  $(".order-btn").on("click", function () {
+    $(".select-quantity-page").show();
+    $(".footer").fadeOut();
+    $(".select-quantity-page").animate({ top: 80 }, 300, "linear");
+  });
+
+  $(".quant-close-btn").on("click", function () {
+    $(".select-quantity-page").hide();
+    $(".footer").show();
+    $(".select-quantity-page").animate({ top: 990 }, 500);
+  });
+});
 
 // 수량 증가, 감소
 $(function () {

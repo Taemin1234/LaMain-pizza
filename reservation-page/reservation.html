@@ -76,12 +76,11 @@
     <!-- 예약 달력 페이지 -->
     <div class="reserv-page">
       <div class="reserv-page-title">
-        <h1>피자 예약 현황</h1>
+        <h1>예약 현황</h1>
       </div>
-      <div class="close-btn">X</div>
+      <div class="calender-close-btn"></div>
       <div class="reserv-top">
         <div class="calender-month">
-          <button>오늘</button>
           <div class="choice-calender">
             <div class="month-prev"></div>
             <div class="choice">
@@ -90,14 +89,13 @@
             </div>
             <div class="month-next"></div>
           </div>
-          <div class="blank"></div>
         </div>
         <div class="reserv-school">
           <p class="reserv-school-title">예약 학교</p>
           <div class="sort-school">
-            <p>● 초 (<span>03</span>)&nbsp;</p>
-            <p>● 중 (<span>05</span>)&nbsp;</p>
-            <p>● 고 (<span>04</span>)&nbsp;</p>
+            <p><div class="option-content">|</div> 초 (<span>03</span>)</p>
+            <p><div class="option-content">|</div> 중 (<span>05</span>)</p>
+            <p><div class="option-content">|</div> 고 (<span>04</span>)</p>
           </div>
         </div>
       </div>
@@ -118,11 +116,14 @@
                 <span class="date">1</span>
               </div>
               <div class="rest-book book-box">
-                <img src="../img/pizza-truck-bw.png" alt="" />
                 <a href="../reservation-detail/reservation-detail.html">
-                  <p>잔여</p>
-                  <p><span class="rest-car">2 </span>/ 2</p>
+                  <img src="../img/pizza-truck-bw.png" alt="" />
+                  <div class="book-text">
+                    <p>잔여 &nbsp;</p>
+                    <p><span class="rest-car">2 </span>/ 2</p>
+                  </div>
                 </a>
+                <span class="hover-balloon">예약하러 가기</span>
               </div>
             </li>
             <li>
@@ -131,13 +132,21 @@
               </div>
               <div class="full-book book-box">
                 <p class="soldout-alert">Sold Out</p>
-                <p>잔여</p>
-                <p><span class="rest-car">0 </span>/ 2</p>
               </div>
             </li>
             <li>
               <div class="date-wrap">
                 <span class="date">3</span>
+              </div>
+              <div class="rest-book book-box">
+                <a href="../reservation-detail/reservation-detail.html">
+                  <img src="../img/pizza-truck-bw.png" alt="" />
+                  <div class="book-text">
+                    <p>잔여 &nbsp;</p>
+                    <p><span class="rest-car">2 </span>/ 2</p>
+                  </div>
+                </a>
+                <span class="hover-balloon">예약하러 가기</span>
               </div>
             </li>
             <li>
@@ -283,8 +292,8 @@
     <footer class="footer">
       <div class="fnb">
         <ul>
-          <li><a>이용약관</a></li>
-          <li><a>개인정보처리방침</a></li>
+          <li><a href="../etc/service.html">이용약관</a></li>
+          <li><a href="../etc/privacy.html">개인정보처리방침</a></li>
         </ul>
       </div>
       <div class="footer-web">

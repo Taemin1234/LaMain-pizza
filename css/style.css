@@ -357,7 +357,7 @@ template {
   align-content: center;
 }
 
-.calender-contents .week-container, .calender-head ul, .nav-bar {
+.info-quantity, .calender-contents .week-container, .calender-head ul, .nav-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -366,7 +366,7 @@ template {
   align-content: center;
 }
 
-.fnb ul, .reserv-school .sort-school, .reserv-school, .choice-calender, .calender-month, .login_box .login_kakao a {
+.fnb ul, .reserv-school .sort-school, .reserv-school, .choice-calender, .login_box .login_kakao a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -441,23 +441,24 @@ ol {
 
 .bg {
   position: relative;
-  background-image: url(../img/login/bg-pizza.jpg);
+  background-image: url(../img/bg/reserv-bg-2.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
 }
 
 .login-wrap {
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
   height: 470px;
   padding: 15px;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #eee;
 }
 
 .login_box {
@@ -527,7 +528,7 @@ ol {
 @media (min-width: 768px) {
   .bg {
     position: relative;
-    background-image: url(../img/login/bg-pizza2.jpg);
+    background-image: url(../img/bg/reserv-bg-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -639,7 +640,7 @@ ol {
   }
 }
 .reserv-body-bg {
-  background-image: url(../img/main/main2.jpg);
+  background-image: url(../img/bg/reserv-bg-1.jpg);
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -654,16 +655,16 @@ ol {
   background-color: #eee;
   box-sizing: border-box;
 }
-.reserv-page .close-btn {
+.reserv-page .calender-close-btn {
   position: absolute;
-  right: 30px;
+  left: 30px;
   top: 32px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border: solid 2px #000;
-  font-size: 32px;
-  text-align: center;
-  line-height: 35px;
+  border-right: none;
+  border-top: none;
+  transform: rotate(45deg);
   cursor: pointer;
 }
 
@@ -679,15 +680,6 @@ ol {
 
 .calender-month {
   margin-bottom: 10px;
-}
-.calender-month button {
-  width: 44px;
-  height: 30px;
-  font-size: 15px;
-  margin-right: 25px;
-  border: solid 1px #000;
-  background-color: #fff;
-  cursor: pointer;
 }
 
 .choice-calender {
@@ -713,12 +705,6 @@ ol {
   transform: rotate(45deg);
 }
 
-.blank {
-  width: 44px;
-  height: 30px;
-  margin-left: 25px;
-}
-
 .reserv-school {
   margin: 20px 0;
 }
@@ -726,7 +712,7 @@ ol {
   font-weight: bold;
 }
 .reserv-school p {
-  margin-right: 10px;
+  margin-right: 3px;
 }
 .calender {
   background-color: #fff;
@@ -769,13 +755,12 @@ ol {
   padding: 5px;
   border: solid 1px #ddd;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .calender-contents li .date-wrap {
   position: absolute;
   width: 100%;
   height: 20px;
-  top: 0;
+  top: 5px;
   font-size: 18px;
   box-sizing: border-box;
 }
@@ -795,8 +780,31 @@ ol {
   font-weight: bold;
   text-align: center;
 }
+.calender-contents li .rest-book {
+  position: relative;
+}
+.calender-contents li .rest-book a {
+  width: 100%;
+  height: 100%;
+}
 .calender-contents li .rest-book a:hover {
   text-decoration: underline;
+}
+.calender-contents li .rest-book a:hover + span.hover-balloon {
+  display: block;
+}
+.calender-contents li .rest-book .hover-balloon {
+  display: none;
+  position: absolute;
+  right: -113px;
+  top: 40px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  z-index: 5;
 }
 .calender-contents li .full-book .soldout-alert {
   display: flex;
@@ -826,20 +834,34 @@ ol {
     width: 620px;
     margin: 0 auto;
   }
+
+  .book-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 5px;
+  }
 }
 .main-contents {
   max-width: 1320px;
-  height: 809px;
-  margin: 0 auto;
-  padding-top: 80px;
+  height: 680px;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-content: center;
 }
 
 .main-box {
   width: 200px;
   height: 200px;
-  margin: 30px 0px;
-  background-color: #fff;
-  border: solid 1px #ddd;
+  padding: 50px 20px;
+  background-color: #3f5d67;
   border-radius: 20px;
   text-align: center;
   box-sizing: border-box;
@@ -854,34 +876,29 @@ ol {
   transition: all 0.3s;
 }
 .main-box img {
-  width: 90px;
-  height: 90px;
-  margin: 20px 0;
-}
-
-.main-box:nth-child(1),
-.main-box:nth-child(3) {
-  float: left;
-}
-
-.main-box:nth-child(2),
-.main-box:nth-child(4) {
-  float: right;
+  width: 70px;
+  height: 70px;
 }
 
 .main-box-title {
   width: 100%;
   height: 34%;
-  background-color: #fdc462;
 }
 .main-box-title h3 {
   text-align: center;
   line-height: 62px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .main-contents {
-    display: block;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 604px;
+    grid-gap: 10px;
   }
 
   .main-box {
@@ -896,12 +913,20 @@ ol {
     line-height: 89px;
   }
 }
+.reserv-detail-body-bg {
+  position: relative;
+  background-image: url(../img/bg/reserv-bg-2.jpg);
+  -o-object-fit: unset;
+     object-fit: unset;
+  background-position: bottom;
+}
+
 main {
   padding-top: 80px;
 }
 
 .order-detail-page {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .food-img-wrap {
@@ -998,17 +1023,43 @@ main {
 }
 
 .select-quantity-page {
+  position: absolute;
+  top: 990px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
   width: 500px;
   padding: 20px;
   margin: 0 auto;
+  border-radius: 20px;
+  background-color: #fff;
   box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.quant-title {
+  padding: 10px;
+}
+.quant-title h2 {
+  text-align: center;
+}
+.quant-title .quant-close-btn {
+  position: absolute;
+  top: 40px;
+  width: 25px;
+  height: 25px;
+  border: solid 2px #000;
+  border-right: none;
+  border-top: none;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .recommend-quantity {
   width: 460px;
   height: 80px;
   padding: 10px;
-  margin-bottom: 30px;
+  margin: 30px auto;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-sizing: border-box;
@@ -1016,12 +1067,12 @@ main {
 .recommend-quantity span {
   font-size: 15px;
   color: #949292;
-  padding-left: 20px;
 }
 .recommend-quantity .standard-recommend {
   padding-top: 10px;
 }
-.recommend-quantity .option-content {
+
+.option-content {
   color: #747272;
   padding: 0;
   margin: 0 5px;
@@ -1035,19 +1086,22 @@ main {
   border-bottom: solid 2px #949292;
 }
 .select-quantity-wrap img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .info-quantity {
+  width: 100%;
   padding-right: 10px;
   margin-left: 20px;
 }
+.info-quantity .quant-info-txt h4 {
+  margin-bottom: 10px;
+}
 .info-quantity .quantity-input-wrap {
   width: 113px;
-  margin-top: 20px;
   padding: 3px;
   border: solid 2px #ddd;
   border-radius: 50px 50px 50px 50px;
@@ -1084,9 +1138,15 @@ main {
   color: #fdc462;
 }
 
+@media (min-width: 621px) {
+  .select-quantity-page {
+    width: 660px;
+    transition: all 0.3s;
+  }
+}
 .footer {
   width: 100%;
-  height: 360px;
+  height: 334px;
   padding: 0 10px;
   text-align: center;
   box-sizing: border-box;
@@ -1113,6 +1173,7 @@ main {
 .footer-contents {
   text-align: center;
   line-height: 1.5;
+  font-size: 12px;
   padding-top: 16px;
 }
 

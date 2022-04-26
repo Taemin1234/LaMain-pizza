@@ -57,18 +57,20 @@ $sub-color: #949292;
   align-items: center;
 }
 
+$basic-font: "Noto Sans KR", sans-serif;
+
 * {
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: $basic-font;
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: $basic-font;
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: $basic-font;
 }
 
 h1 {
@@ -331,8 +333,6 @@ ol {
 @media (min-width: 768px) {
   .menu-slide-wrap {
     font-size: 18px;
-
-    display: block;
 
     ul {
       display: flex;
@@ -717,18 +717,11 @@ ol {
 .reserv-detail-body-bg {
   position: relative;
 
-  background-image: url(../img/bg/reserv-bg-2.jpg);
-  object-fit: unset;
-
-  background-position: bottom;
+  background-image: url(../img/bg/reserv-bg-1.jpg);
 }
 
 main {
   padding-top: 80px;
-}
-
-.order-detail-page {
-  background-color: #fff;
 }
 
 .food-img-wrap {
@@ -794,6 +787,7 @@ main {
   padding: 20px;
   margin: 0 auto;
 
+  background-color: #fff;
   box-sizing: border-box;
 
   h2 {
@@ -842,11 +836,107 @@ main {
   }
 }
 
+//피자 상세 설명 페이지
+.detail-info-wrap {
+  width: 500px;
+
+  margin: 0 auto;
+
+  background-color: #fff;
+  border-top: solid 10px $border-color;
+}
+
+.order-btn-float {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 909px;
+
+  display: none;
+
+  width: 500px;
+  height: 60px;
+
+  font-size: 28px;
+  color: #fff;
+
+  border-radius: 3px;
+
+  background-color: $theme-color;
+
+  z-index: 5;
+
+  &:hover {
+    background-color: #fff;
+    border: solid 3px $theme-color;
+
+    color: $theme-color;
+  }
+}
+
+.detail-info-title {
+  text-align: center;
+
+  margin: 20px 0;
+}
+
+.youtube-content {
+  width: 100%;
+
+  iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+.product-info-content {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.product-info {
+  width: 500px;
+  border: solid 2px #000;
+  border-radius: 3px;
+  padding: 30px;
+  margin-top: 40px;
+
+  box-sizing: border-box;
+
+  .product-name {
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-top: 0;
+  }
+
+  p {
+    margin: 25px 0;
+  }
+
+  img {
+    width: 450px;
+
+    box-sizing: border-box;
+  }
+
+  ul {
+    width: 100%;
+    background-color: $border-color;
+    padding: 10px;
+
+    box-sizing: border-box;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+}
+
 //피자 수량 선택 페이지
 
 .select-quantity-page {
-  position: absolute;
-  top: 990px;
+  position: sticky;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -863,7 +953,6 @@ main {
   background-color: #fff;
 
   box-sizing: border-box;
-  transition: all 0.3s;
 }
 
 .quant-title {
@@ -1052,6 +1141,7 @@ main {
   line-height: 1.5;
 
   font-size: 12px;
+  letter-spacing: 1px;
 
   padding-top: 16px;
 }
@@ -1069,11 +1159,13 @@ main {
 
   ul {
     font-size: 12px;
+    letter-spacing: 1px;
   }
 }
 .copyright {
   margin-top: 20px;
   font-size: 12px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 992px) {

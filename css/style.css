@@ -621,7 +621,6 @@ ol {
 @media (min-width: 768px) {
   .menu-slide-wrap {
     font-size: 18px;
-    display: block;
   }
   .menu-slide-wrap ul {
     display: flex;
@@ -915,18 +914,11 @@ ol {
 }
 .reserv-detail-body-bg {
   position: relative;
-  background-image: url(../img/bg/reserv-bg-2.jpg);
-  -o-object-fit: unset;
-     object-fit: unset;
-  background-position: bottom;
+  background-image: url(../img/bg/reserv-bg-1.jpg);
 }
 
 main {
   padding-top: 80px;
-}
-
-.order-detail-page {
-  background-color: #fff;
 }
 
 .food-img-wrap {
@@ -984,6 +976,7 @@ main {
   width: 500px;
   padding: 20px;
   margin: 0 auto;
+  background-color: #fff;
   box-sizing: border-box;
 }
 .order-detail-wrap h2 {
@@ -1022,9 +1015,84 @@ main {
   background-color: #ddd;
 }
 
+.detail-info-wrap {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-top: solid 10px #ddd;
+}
+
+.order-btn-float {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 909px;
+  display: none;
+  width: 500px;
+  height: 60px;
+  font-size: 28px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #fdc462;
+  z-index: 5;
+}
+.order-btn-float:hover {
+  background-color: #fff;
+  border: solid 3px #fdc462;
+  color: #fdc462;
+}
+
+.detail-info-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.youtube-content {
+  width: 100%;
+}
+.youtube-content iframe {
+  width: 500px;
+  height: 300px;
+}
+
+.product-info-content {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.product-info {
+  width: 500px;
+  border: solid 2px #000;
+  border-radius: 3px;
+  padding: 30px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.product-info .product-name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.product-info p {
+  margin: 25px 0;
+}
+.product-info img {
+  width: 450px;
+  box-sizing: border-box;
+}
+.product-info ul {
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.product-info li {
+  margin: 10px 0;
+}
+
 .select-quantity-page {
-  position: absolute;
-  top: 990px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -1034,7 +1102,6 @@ main {
   border-radius: 20px;
   background-color: #fff;
   box-sizing: border-box;
-  transition: all 0.3s;
 }
 
 .quant-title {
@@ -1174,6 +1241,7 @@ main {
   text-align: center;
   line-height: 1.5;
   font-size: 12px;
+  letter-spacing: 1px;
   padding-top: 16px;
 }
 
@@ -1189,11 +1257,13 @@ main {
 }
 .footer-cs ul {
   font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .copyright {
   margin-top: 20px;
   font-size: 12px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 992px) {

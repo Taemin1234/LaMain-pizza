@@ -81,7 +81,7 @@ $(window).on("scroll", function () {
 //주문하러가기 클릭시 주문창 슬라이드업
 $(function () {
   $(".order-btn, .order-btn-float").on("click", function () {
-    $(".select-quantity-page").slideDown("fast");
+    $(".select-quantity-page").slideDown(300);
     $(".order-detail-page, .footer, .detail-info-wrap").fadeOut();
     $("html").scrollTop(0);
   });

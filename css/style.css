@@ -397,6 +397,13 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+h4,
+h3,
+h2,
+h1 {
+  font-weight: normal;
+}
+
 h1 {
   margin: 0;
 }

@@ -901,7 +901,7 @@ header {
 }
 .main-box-title h3 {
   text-align: center;
-  line-height: 62px;
+  color: #fff;
 }
 
 @media (min-width: 992px) {

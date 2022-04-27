@@ -545,6 +545,10 @@ ol {
     width: 275px;
   }
 }
+header {
+  position: relative;
+}
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -618,9 +622,14 @@ ol {
   display: block;
 }
 
+.menu-slide-wrap.active {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .menu-slide-wrap {
     font-size: 18px;
+    display: block !important;
   }
   .menu-slide-wrap ul {
     display: flex;
@@ -1076,7 +1085,7 @@ main {
   margin: 25px 0;
 }
 .product-info img {
-  width: 450px;
+  width: 430px;
   box-sizing: border-box;
 }
 .product-info ul {
@@ -1093,8 +1102,6 @@ main {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
   display: none;
   width: 500px;
   padding: 20px;

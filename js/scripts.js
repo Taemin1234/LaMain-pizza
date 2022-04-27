@@ -86,24 +86,8 @@ $(function () {
 
 //예약 시스템 메뉴 바 설정
 $(function () {
-  // var w = $(window).width();
-
-  // if (w < 768) {
-  //   $(".btn-menu").on("click", function () {
-  //     $(".menu-slide-wrap").toggle();
-  //   });
-  // } else {
-  //   $(".menu-slide-wrap").show();
-  // }
-
-  $(window).ready(function () {
-    if ($(window).width() < 768) {
-      $(".btn-menu").on("click", function () {
-        $(".menu-slide-wrap").toggle();
-      });
-    } else {
-      $(".menu-slide-wrap").show();
-    }
+  $(".btn-menu").on("click", function () {
+    $(".menu-slide-wrap").toggleClass("active");
   });
 });
 
@@ -148,7 +132,6 @@ $(function () {
 //스크롤을 내리면 주문하기가 나옴
 
 $(window).on("scroll", function () {
-  //643
   if ($(window).scrollTop() >= 643) {
     $(".order-btn-float").show();
     $(".detail-info-title").css("margin-top", "-30px");
@@ -156,10 +139,6 @@ $(window).on("scroll", function () {
     $(".order-btn-float").hide();
     $(".detail-info-title").css("margin-top", "30px");
   }
-
-  $(window).on("scroll", function () {
-    console.log($("html").scrollTop());
-  });
 });
 
 // 피자 수량 선택 페이지
@@ -169,6 +148,7 @@ $(function () {
   $(".order-btn, .order-btn-float").on("click", function () {
     $(".select-quantity-page").slideDown();
     $(".order-detail-page, .footer, .detail-info-wrap").fadeOut();
+    $("html").scrollTop(0);
   });
 
   $(".quant-close-btn").on("click", function () {

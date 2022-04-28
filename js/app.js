@@ -69,10 +69,8 @@ $(function () {
 $(window).on("scroll", function () {
   if ($(window).scrollTop() >= 643) {
     $(".order-btn-float").show();
-    $(".detail-info-title").css("margin-top", "-30px");
   } else {
     $(".order-btn-float").hide();
-    $(".detail-info-title").css("margin-top", "30px");
   }
 });
 
@@ -81,14 +79,15 @@ $(window).on("scroll", function () {
 //주문하러가기 클릭시 주문창 슬라이드업
 $(function () {
   $(".order-btn, .order-btn-float").on("click", function () {
-    $(".select-quantity-page").slideDown(300);
-    $(".order-detail-page, .footer, .detail-info-wrap").fadeOut();
-    $("html").scrollTop(0);
+    $(".select-quantity-page").css({ bottom: 0 });
+
+    //$(".order-detail-page, .detail-info-wrap").fadeOut();
   });
 
   $(".quant-close-btn").on("click", function () {
-    $(".select-quantity-page").slideUp();
-    $(".order-detail-page, .footer, .detail-info-wrap").show();
+    $(".select-quantity-page").css({ bottom: "-100%" });
+
+    //$(".order-detail-page, .detail-info-wrap").show();
   });
 });
 

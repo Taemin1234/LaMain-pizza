@@ -339,7 +339,7 @@ template {
   display: none;
 }
 
-.select-quantity-wrap, .info-wrap {
+.select-quantity-wrap, .info-wrap, .reserv-school {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -366,7 +366,7 @@ template {
   align-content: center;
 }
 
-.fnb ul, .reserv-school .sort-school, .reserv-school, .choice-calender, .login_box .login_kakao a {
+.fnb ul, .reserv-school .sort-school, .choice-calender, .menu-slide-wrap-tab ul, .login_box .login_kakao a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -375,7 +375,7 @@ template {
   align-content: flex-start;
 }
 
-.calender-contents li {
+.footer-web, .calender-contents li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -391,10 +391,12 @@ template {
 
 html {
   font-family: "Noto Sans KR", sans-serif;
+  height: 100%;
 }
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  height: 100%;
 }
 
 h4,
@@ -465,7 +467,6 @@ ol {
   height: 470px;
   padding: 15px;
   border-radius: 3px;
-  background-color: #eee;
 }
 
 .login_box {
@@ -476,10 +477,10 @@ ol {
 }
 .login_box .login-logo {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .login_box .login-logo img {
-  width: 70px;
+  width: 200px;
 }
 .login_box .login-title {
   text-align: center;
@@ -544,7 +545,7 @@ ol {
   }
 
   .login-wrap {
-    width: 650px;
+    width: 350px;
     height: 490px;
   }
 
@@ -570,10 +571,34 @@ header {
 }
 
 .main-logo {
-  width: 80px;
+  width: 100px;
 }
 .main-logo img {
-  width: 70px;
+  width: 100%;
+}
+
+.menu-slide-wrap-tab {
+  display: none;
+  height: 100%;
+}
+.menu-slide-wrap-tab .call-calendar-tab {
+  cursor: pointer;
+}
+.menu-slide-wrap-tab ul {
+  height: 100%;
+  vertical-align: middle;
+}
+.menu-slide-wrap-tab li {
+  height: 100%;
+  margin: 0 10px;
+  font-size: 19px;
+  line-height: 64px;
+}
+.menu-slide-wrap-tab li:hover {
+  border-bottom: solid 4px #e70012;
+}
+.menu-slide-wrap-tab a {
+  display: block;
 }
 
 .menu-wrap .btn-userinfo {
@@ -600,43 +625,51 @@ header {
   cursor: pointer;
 }
 
-.header-title {
-  display: none;
-}
+@media (min-width: 992px) {
+  .main-logo {
+    width: 120px;
+  }
 
-@media (min-width: 768px) {
-  .header-title {
-    display: flex;
-    width: 170px;
-    margin-left: 180px;
+  .menu-slide-wrap-tab {
+    display: block;
   }
 }
 .menu-slide-wrap {
+  position: fixed;
+  top: 80px;
+  height: 140xp;
+  width: 100%;
   background-color: #fff;
-  padding: 80px 10px 0;
-  font-size: 19px;
+  padding: 0 10px;
+  font-size: 16px;
   display: none;
+  z-index: 5;
 }
 .menu-slide-wrap li {
   height: 45px;
-  padding: 10px;
   border-bottom: solid 1px #ddd;
+  transition: 0.5s ease-in-out;
+}
+.menu-slide-wrap li:hover {
+  transform: translateX(15px);
+  transition: 0.5s ease-in-out;
 }
 .menu-slide-wrap .call-calendar {
   cursor: pointer;
 }
 .menu-slide-wrap a {
   display: block;
+  padding: 10px;
 }
 
 .menu-slide-wrap.active {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu-slide-wrap {
     font-size: 18px;
-    display: block !important;
+    display: none !important;
   }
   .menu-slide-wrap ul {
     display: flex;
@@ -676,7 +709,7 @@ header {
   top: 32px;
   width: 35px;
   height: 35px;
-  border: solid 2px #000;
+  border: solid 1px #000;
   border-right: none;
   border-top: none;
   transform: rotate(45deg);
@@ -705,23 +738,24 @@ header {
 }
 .choice-calender .month-next,
 .choice-calender .month-prev {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
 }
 .choice-calender .month-prev {
-  border-left: solid 2px #000;
-  border-bottom: solid 2px #000;
+  border-left: solid 1px #000;
+  border-bottom: solid 1px #000;
   transform: rotate(45deg);
 }
 .choice-calender .month-next {
-  border-right: solid 2px #000;
-  border-top: solid 2px #000;
+  border-right: solid 1px #000;
+  border-top: solid 1px #000;
   transform: rotate(45deg);
 }
 
 .reserv-school {
-  margin: 20px 0;
+  margin: 20px 15px;
+  box-sizing: border-box;
 }
 .reserv-school .reserv-school-title {
   font-weight: bold;
@@ -791,8 +825,7 @@ header {
   width: 50px;
 }
 .calender-contents li .book-box p {
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
   text-align: center;
 }
 .calender-contents li .rest-book {
@@ -801,6 +834,7 @@ header {
 .calender-contents li .rest-book a {
   width: 100%;
   height: 100%;
+  display: block;
 }
 .calender-contents li .rest-book a:hover {
   text-decoration: underline;
@@ -859,11 +893,19 @@ header {
     align-content: flex-start;
     margin-top: 5px;
   }
+
+  .book-box p {
+    font-size: 16px !important;
+  }
+  .book-box a {
+    text-align: center;
+  }
 }
 .main-contents {
   max-width: 1320px;
-  height: 680px;
-  padding-top: 0;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 240px;
   display: grid;
   grid-template-columns: 200px 200px;
   grid-template-rows: 200px 200px;
@@ -876,7 +918,8 @@ header {
   width: 200px;
   height: 200px;
   padding: 50px 20px;
-  background-color: #3f5d67;
+  background-color: #fff;
+  border: #bdc9cd solid 1px;
   border-radius: 20px;
   text-align: center;
   box-sizing: border-box;
@@ -901,7 +944,7 @@ header {
 }
 .main-box-title h3 {
   text-align: center;
-  color: #fff;
+  color: #3f5d67;
 }
 
 @media (min-width: 992px) {
@@ -910,7 +953,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 624px;
     grid-gap: 10px;
@@ -919,6 +962,7 @@ header {
   .main-box {
     width: 225px;
     height: 225px;
+    margin: 0 7px;
   }
 
   .main-box-title {
@@ -1018,39 +1062,41 @@ header {
   height: 60px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #fff;
-  border: solid 2px #ddd;
+  color: #fff;
+  background-color: #e70012;
+  border: solid 1px #e70012;
   border-radius: 3px;
   cursor: pointer;
 }
 .order-btn-wrap button:hover {
-  background-color: #ddd;
+  background-color: #fff;
+  color: #e70012;
 }
 
 .detail-info-wrap {
   width: 500px;
   margin: 0 auto;
-  background-color: #fff;
-  border-top: solid 10px #ddd;
+  background-color: rgb(229, 229, 229);
 }
 
 .order-btn-float {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 909px;
+  position: -webkit-fixed;
+  position: fixed;
+  bottom: 0;
   display: none;
   width: 500px;
   height: 60px;
-  font-size: 28px;
+  font-size: 20px;
+  font-weight: bold;
   color: #fff;
   border-radius: 3px;
-  background-color: #fdc462;
+  background-color: #e70012;
   z-index: 5;
 }
 .order-btn-float:hover {
   background-color: #fff;
-  border: solid 3px #fdc462;
-  color: #fdc462;
+  border: solid 3px #e70012;
+  color: #e70012;
 }
 
 .detail-info-title {
@@ -1073,7 +1119,6 @@ header {
 
 .product-info {
   width: 500px;
-  border: solid 2px #000;
   border-radius: 3px;
   padding: 30px;
   margin-top: 40px;
@@ -1081,7 +1126,6 @@ header {
 }
 .product-info .product-name {
   font-size: 25px;
-  font-weight: bold;
   margin-top: 0;
 }
 .product-info p {
@@ -1102,16 +1146,19 @@ header {
 }
 
 .select-quantity-page {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 80px;
-  display: none;
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 500px;
+  height: 92vh;
   padding: 20px;
   margin: 0 auto;
-  border-radius: 20px;
   background-color: #fff;
   box-sizing: border-box;
+  overflow-y: auto;
+  transition: all, 500ms;
+  z-index: 10;
 }
 
 .quant-title {
@@ -1122,7 +1169,7 @@ header {
 }
 .quant-title .quant-close-btn {
   position: absolute;
-  top: 40px;
+  top: 32px;
   width: 25px;
   height: 25px;
   border: solid 2px #000;
@@ -1200,11 +1247,11 @@ header {
 .total-amount {
   width: 430px;
   height: 50px;
-  background-color: #fdc462;
+  background-color: #e70012;
   color: #fff;
   margin: 20px auto;
   padding: 10px;
-  border: solid 1px #fdc462;
+  border: solid 1px #e70012;
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
@@ -1212,24 +1259,20 @@ header {
 }
 .total-amount:hover {
   background-color: #fff;
-  color: #fdc462;
+  color: #e70012;
 }
 
-@media (min-width: 621px) {
-  .select-quantity-page {
-    width: 660px;
-    transition: all 0.3s;
-  }
-}
 .footer {
+  position: relative;
+  transform: translateY(-100%);
   width: 100%;
-  height: 322px;
-  padding: 0 10px;
+  height: 340px;
+  padding: 0 15px;
   text-align: center;
   box-sizing: border-box;
   font-size: 0.9rem;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #212529;
+  background-color: rgb(91, 91, 91);
   color: #fff;
 }
 
@@ -1247,12 +1290,27 @@ header {
   color: #929191;
 }
 
+.footer-web {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.footer-logo {
+  width: 20%;
+  height: 100%;
+  display: none;
+}
+.footer-logo img {
+  width: 110px;
+}
+
 .footer-contents {
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
   font-size: 12px;
   letter-spacing: 1px;
   padding-top: 16px;
+  margin-right: 15px;
 }
 
 .footer-cs {
@@ -1263,10 +1321,11 @@ header {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: #929191;
+  color: #ccc;
 }
 .footer-cs ul {
-  font-size: 12px;
+  text-align: center;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -1278,7 +1337,7 @@ header {
 
 @media (min-width: 992px) {
   .footer {
-    height: 220px;
+    height: 270px;
   }
 
   .footer-web {
@@ -1287,5 +1346,17 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-logo {
+    display: block;
+  }
+
+  .footer-contents {
+    width: 40%;
+  }
+
+  .footer-cs {
+    width: 30%;
   }
 }

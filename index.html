@@ -22,15 +22,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
     />
     <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
       rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-      rel="stylesheet"
-      type="text/css"
     />
 
     <!-- jquery -->
@@ -48,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="#page-top"
-          ><img src="./img/logos/main_logo.png" alt="..."
+          ><img src="./img/logos/라망 가로.png" alt="..."
         /></a>
         <button
           class="navbar-toggler"
@@ -63,7 +59,7 @@
           <i class="fas fa-bars ms-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <ul class="navbar-nav text-uppercase ms-auto py-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#services">서비스 안내</a>
             </li>
@@ -563,22 +559,43 @@
     <div class="reservation-fixed">
       <a href="./login/login.html" target="_blank">
         <div class="reserv-text">
-          <p>예약하기<i class="fa-solid fa-play"></i></p>
+          <p>예약하기 <i class="fa-solid fa-chevron-right"></i></p>
         </div>
       </a>
     </div>
-    <!-- Footer-->
-    <footer class="footer py-4">
-      <div class="footer-contents">
-        페이잇 주식회사<br />
-        대표 : 박진성<br />
-        주소: 경상북도 경산시 대학로 280, 창업보육센터 신관 212호(대동,
-        영남대학교)
-        <br />사업자번호 : 176-88-01702<br />
-        통신판매업번호 : 제2021-대구수성구-0014호<br />
-        Copyright &copy Payeat Corp. All Rights Reserved
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="fnb">
+        <ul>
+          <li><a href="../etc/service.html">이용약관</a></li>
+          <li><a href="../etc/privacy.html">개인정보처리방침</a></li>
+        </ul>
       </div>
+      <div class="footer-web">
+        <div class="footer-logo">
+          <img src="./img/logos/라망.png" alt="" />
+        </div>
+        <div class="footer-contents">
+          페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
+          주소: 경상북도 경산시 대학로 280, 창업보육센터 신관 212호(대동,
+          영남대학교)
+          <br />사업자번호 : 176-88-01702<br />
+          통신판매업번호 : 제2021-대구수성구-0014호
+        </div>
+        <div class="footer-cs">
+          <p>Contact</p>
+          <ul>
+            <li>전화 : 1544-5202</li>
+            <li>팩스 : 0504-390-7321</li>
+            <li>이메일 : help@payeat.co.kr</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
     </footer>
+
     <!-- Portfolio Modals-->
     <!-- Portfolio item 1 modal popup-->
     <div
@@ -589,56 +606,42 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="./img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <h2 class="text-uppercase">프리미엄 피자</h2>
-                  <p class="item-intro text-muted">
-                    ~~와 ~~가 들어가 누구든지 즐길 수 있는 피자
-                  </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="./img/menu/menu1.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    "고객만족도 1위 매콤한 칠리소스와 담백한 불갈비의 만남"
-                    담백한 갈비살과 매콤한 칠리에 피망, 양파, 양송이버섯, 치즈
-                    등 신선한 야채까지 어우러진 토핑!부드럽고 담백한 7번가
-                    피자만의 곡물 도우와 함께 어우러져 엣지까지 놓칠 수 없는 맛!
-                  </p>
-                  <ul class="list-inline">
-                    <li>
-                      <strong>함량:</strong>
-                      판(640g, 80g X 8조각)
-                    </li>
-                    <li>
-                      <strong>가격:</strong>
-                      14,500원
-                    </li>
-                    <li>
-                      <strong>준비물:</strong>
-                      양파 6kg, 피망 4kg, 양송이 3kg, 스위트콘 大(1캔)<br />
-                      (100판 기준, 볶음밥용으로 잘라주세요)
-                    </li>
-                  </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
-                </div>
-              </div>
-            </div>
+        <div class="close-modal" data-bs-dismiss="modal">
+          <img src="./img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="row justify-content-center">
+          <div class="modal-body">
+            <!-- Project details-->
+            <h2 class="text-uppercase">프리미엄 피자</h2>
+            <p class="item-intro text-muted">
+              ~~와 ~~가 들어가 누구든지 즐길 수 있는 피자
+            </p>
+            <img
+              class="img-fluid d-block mx-auto"
+              src="./img/menu/menu1.jpg"
+              alt="..."
+            />
+            <p>
+              "고객만족도 1위 매콤한 칠리소스와 담백한 불갈비의 만남" 담백한
+              갈비살과 매콤한 칠리에 피망, 양파, 양송이버섯, 치즈 등 신선한
+              야채까지 어우러진 토핑!부드럽고 담백한 7번가 피자만의 곡물 도우와
+              함께 어우러져 엣지까지 놓칠 수 없는 맛!
+            </p>
+            <ul class="list-inline">
+              <li>
+                <strong>함량:</strong>
+                판(640g, 80g X 8조각)
+              </li>
+              <li>
+                <strong>가격:</strong>
+                14,500원
+              </li>
+              <li>
+                <strong>준비물:</strong>
+                양파 6kg, 피망 4kg, 양송이 3kg, 스위트콘 大(1캔)<br />
+                (100판 기준, 볶음밥용으로 잘라주세요)
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -652,54 +655,42 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="./img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <h2 class="text-uppercase">치즈 크러스트 피자</h2>
-                  <p class="item-intro text-muted">
-                    피자 가득히 이불을 덮고 있는듯한 통통한 치즈! 입안 가득히
-                    느껴지는 고소한 치즈의 향연!
-                  </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="./img/menu/menu2.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    독일산 모짜렐라 치즈와 고다치즈를 사용하여 만든 고소한
-                    치즈크러스트 피자
-                  </p>
-                  <ul class="list-inline">
-                    <li>
-                      <strong>함량:</strong>
-                      판(640g, 80g X 8조각)
-                    </li>
-                    <li>
-                      <strong>가격:</strong>
-                      15,500원
-                    </li>
-                    <li>
-                      <strong>준비물:</strong>
-                      양파 6kg, 피망 4kg, 양송이 3kg, 스위트콘 大(1캔)<br />
-                      (100판 기준, 볶음밥용으로 잘라주세요)
-                    </li>
-                  </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
-                </div>
-              </div>
+        <div class="close-modal" data-bs-dismiss="modal">
+          <img src="./img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">치즈 크러스트 피자</h2>
+              <p class="item-intro text-muted">
+                피자 가득히 이불을 덮고 있는듯한 통통한 치즈! 입안 가득히
+                느껴지는 고소한 치즈의 향연!
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="./img/menu/menu2.jpg"
+                alt="..."
+              />
+              <p>
+                독일산 모짜렐라 치즈와 고다치즈를 사용하여 만든 고소한
+                치즈크러스트 피자
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>함량:</strong>
+                  판(640g, 80g X 8조각)
+                </li>
+                <li>
+                  <strong>가격:</strong>
+                  15,500원
+                </li>
+                <li>
+                  <strong>준비물:</strong>
+                  양파 6kg, 피망 4kg, 양송이 3kg, 스위트콘 大(1캔)<br />
+                  (100판 기준, 볶음밥용으로 잘라주세요)
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -714,52 +705,40 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="./img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <h2 class="text-uppercase">허니 고구마 피자</h2>
-                  <p class="item-intro text-muted">
-                    전북 고창에서 수확한 고구마로 만든 달콤한 고구마 피자
-                  </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="./img/menu/menu3.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    섬유소의 집합소로 알려진 고구마를 푸짐하게 즐겨보세요.
-                    달콤한 고구마가 들어있어 계속 끌리는 마성의 고구마피자!
-                  </p>
-                  <ul class="list-inline">
-                    <li>
-                      <strong>함량:</strong>
-                      판(640g, 80g X 8조각)
-                    </li>
-                    <li>
-                      <strong>가격:</strong>
-                      14,500원
-                    </li>
-                    <li>
-                      <strong>준비물:</strong>
-                      학교에서 준비할 것이 없어요!
-                    </li>
-                  </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
-                </div>
-              </div>
+        <div class="close-modal" data-bs-dismiss="modal">
+          <img src="./img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">허니 고구마 피자</h2>
+              <p class="item-intro text-muted">
+                전북 고창에서 수확한 고구마로 만든 달콤한 고구마 피자
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="./img/menu/menu3.jpg"
+                alt="..."
+              />
+              <p>
+                섬유소의 집합소로 알려진 고구마를 푸짐하게 즐겨보세요. 달콤한
+                고구마가 들어있어 계속 끌리는 마성의 고구마피자!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>함량:</strong>
+                  판(640g, 80g X 8조각)
+                </li>
+                <li>
+                  <strong>가격:</strong>
+                  14,500원
+                </li>
+                <li>
+                  <strong>준비물:</strong>
+                  학교에서 준비할 것이 없어요!
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -811,14 +790,6 @@
                       학교에서 준비할 것이 없어요!
                     </li>
                   </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
                 </div>
               </div>
             </div>
@@ -872,14 +843,6 @@
                       학교에서 준비할 것이 없어요!
                     </li>
                   </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
                 </div>
               </div>
             </div>
@@ -930,14 +893,6 @@
                       학교에서 준비할 것이 없어요!
                     </li>
                   </ul>
-                  <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    메뉴 닫기
-                  </button>
                 </div>
               </div>
             </div>

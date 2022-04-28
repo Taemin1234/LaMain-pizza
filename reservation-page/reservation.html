@@ -27,9 +27,12 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
       rel="stylesheet"
@@ -51,11 +54,18 @@
       <nav class="nav-bar">
         <div class="main-logo">
           <a href="./reservation.html">
-            <img src="../img/logos/라망.png" alt="" />
+            <img src="../img/logos/라망 가로.png" alt="" />
           </a>
         </div>
 
-        <h2 class="header-title">피자 예약 시스템</h2>
+        <div class="menu-slide-wrap-tab">
+          <ul>
+            <li class="call-calendar-tab">피자 예약하기</li>
+            <li><a href="#">내 예약 현황 보기</a></li>
+            <li><a href="#">샘플 주문하기</a></li>
+            <li><a href="#">학교정보관리</a></li>
+          </ul>
+        </div>
 
         <div class="menu-wrap">
           <!-- 학교명, 학교 형태 구분  -->
@@ -64,15 +74,15 @@
           <img src="../img/menu-icon.svg" alt="" class="btn-menu" />
         </div>
       </nav>
-    
+
       <!-- 메뉴 슬라이드 -->
       <div class="menu-slide-wrap">
-      <ul>
-        <li class="call-calendar">피자 예약하기</li>
-        <li><a href="#">내 예약 현황 보기</a></li>
-        <li><a href="#">샘플 주문하기</a></li>
-        <li><a href="#">학교정보관리</a></li>
-      </ul>
+        <ul>
+          <li class="call-calendar"><a>피자 예약하기</a></li>
+          <li><a href="#">내 예약 현황 보기</a></li>
+          <li><a href="#">샘플 주문하기</a></li>
+          <li><a href="#">학교정보관리</a></li>
+        </ul>
       </div>
     </header>
 
@@ -96,20 +106,20 @@
         <div class="reserv-school">
           <p class="reserv-school-title">예약 학교</p>
           <div class="sort-school">
-            <p><div class="option-content">|</div> 초 (<span>03</span>)</p>
-            <p><div class="option-content">|</div> 중 (<span>05</span>)</p>
-            <p><div class="option-content">|</div> 고 (<span>04</span>)</p>
+            <p><span class="option-content">|</span> 초 (<span>03</span>)</p>
+            <p><span class="option-content">|</span> 중 (<span>05</span>)</p>
+            <p><span class="option-content">|</span> 고 (<span>04</span>)</p>
           </div>
         </div>
       </div>
       <div class="calender">
         <div class="calender-head">
           <ul>
-            <li><span>월요일</span></li>
-            <li><span>화요일</span></li>
-            <li><span>수요일</span></li>
-            <li><span>목요일</span></li>
-            <li><span>금요일</span></li>
+            <li><span>월(Mon)</span></li>
+            <li><span>화(Tue)</span></li>
+            <li><span>수(Wed)</span></li>
+            <li><span>목(Thu)</span></li>
+            <li><span>금(Fri)</span></li>
           </ul>
         </div>
         <div class="calender-contents">
@@ -300,6 +310,9 @@
         </ul>
       </div>
       <div class="footer-web">
+        <div class="footer-logo">
+          <img src="../img/logos/라망.png" alt="" />
+        </div>
         <div class="footer-contents">
           페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
           주소: 경상북도 경산시 대학로 280, 창업보육센터 신관 212호(대동,

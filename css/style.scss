@@ -884,6 +884,7 @@ header {
 }
 
 .order-btn-wrap {
+  @extend %flex-between;
   text-align: center;
   margin: 20px auto;
 

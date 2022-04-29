@@ -357,7 +357,7 @@ template {
   align-content: center;
 }
 
-.info-quantity, .calender-contents .week-container, .calender-head ul, .nav-bar {
+.info-quantity, .order-btn-wrap, .calender-contents .week-container, .calender-head ul, .nav-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

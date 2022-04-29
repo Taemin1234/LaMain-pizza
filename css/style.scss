@@ -385,10 +385,6 @@ header {
   }
 }
 
-.menu-slide-wrap.active {
-  display: block;
-}
-
 @media (min-width: 992px) {
   .menu-slide-wrap {
     font-size: 18px;
@@ -1238,6 +1234,7 @@ header {
 .footer-cs {
   margin-top: 20px;
   line-height: 1.5;
+  text-align: left;
 
   p {
     margin-bottom: 10px;
@@ -1250,6 +1247,7 @@ header {
     text-align: center;
     font-size: 16px;
     letter-spacing: 1px;
+    text-align: left;
   }
 }
 .copyright {

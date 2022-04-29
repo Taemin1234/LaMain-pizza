@@ -22,7 +22,7 @@ $(function () {
 //예약 시스템 메뉴 바 설정
 $(function () {
   $(".btn-menu").on("click", function () {
-    $(".menu-slide-wrap").toggleClass("active");
+    $(".menu-slide-wrap").slideToggle();
   });
 });
 
@@ -38,6 +38,12 @@ $(function () {
       $(".main-contents").hide();
       $("footer").hide();
     });
+
+  $(".call-calendar").on("click", function () {
+    $(".reserv-page").show();
+    $(".main-contents").hide();
+    $("footer").hide();
+  });
 });
 
 //피자 달력에서 <를 누르면 사라지기
@@ -80,14 +86,10 @@ $(window).on("scroll", function () {
 $(function () {
   $(".order-btn, .order-btn-float").on("click", function () {
     $(".select-quantity-page").css({ bottom: 0 });
-
-    //$(".order-detail-page, .detail-info-wrap").fadeOut();
   });
 
   $(".quant-close-btn").on("click", function () {
     $(".select-quantity-page").css({ bottom: "-100%" });
-
-    //$(".order-detail-page, .detail-info-wrap").show();
   });
 });
 

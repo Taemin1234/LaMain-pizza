@@ -3182,6 +3182,8 @@ section#team form#contactForm :-ms-input-placeholder {
   left: 100%;
   width: 90%;
   height: 60px;
+
+  border-radius: 50px 0px 00px 50px;
   background-image: linear-gradient(to left, #db868d, #e70012);
   color: #fff;
 }
@@ -3190,7 +3192,7 @@ section#team form#contactForm :-ms-input-placeholder {
   position: absolute;
 
   height: 50px;
-  left: -52px;
+  left: 5px;
   top: 5px;
 }
 
@@ -3214,6 +3216,8 @@ section#team form#contactForm :-ms-input-placeholder {
   border: solid 1px var(--theme-color);
   background-color: #fff;
   color: var(--theme-color);
+  border-radius: 50px 0px 00px 50px;
+  border-right: none;
 }
 
 .reserv-text {
@@ -3337,6 +3341,7 @@ section#team form#contactForm :-ms-input-placeholder {
 .footer-cs {
   margin-top: 20px;
   line-height: 1.5;
+  text-align: left;
 }
 .footer-cs p {
   margin-bottom: 10px;
@@ -3348,6 +3353,7 @@ section#team form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 16px;
   letter-spacing: 1px;
+  text-align: left;
 
   margin: 0;
 }

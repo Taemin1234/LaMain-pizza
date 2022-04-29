@@ -1560,6 +1560,10 @@ textarea.form-control.is-invalid {
   margin-bottom: 10px;
 }
 
+.modal-body p {
+  margin-bottom: 10px;
+}
+
 .modal-footer {
   display: flex;
   flex-wrap: wrap;

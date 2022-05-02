@@ -60,8 +60,14 @@
 
         <div class="menu-slide-wrap-tab">
           <ul>
-            <li class="call-calendar-tab">피자 예약하기</li>
-            <li><a href="#">내 예약 현황 보기</a></li>
+            <li class="call-calendar-tab">
+              <a href="./reservation.html">피자 예약하기</a>
+            </li>
+            <li>
+              <a href="../my-reservation/my-reservation.html"
+                >내 예약 현황 보기</a
+              >
+            </li>
             <li><a href="#">샘플 주문하기</a></li>
             <li><a href="#">학교정보관리</a></li>
           </ul>
@@ -78,8 +84,14 @@
       <!-- 메뉴 슬라이드 -->
       <div class="menu-slide-wrap">
         <ul>
-          <li class="call-calendar"><a>피자 예약하기</a></li>
-          <li><a href="#">내 예약 현황 보기</a></li>
+          <li class="call-calendar">
+            <a href="./reservation.html">피자 예약하기</a>
+          </li>
+          <li>
+            <a href="../my-reservation/my-reservation.html"
+              >내 예약 현황 보기</a
+            >
+          </li>
           <li><a href="#">샘플 주문하기</a></li>
           <li><a href="#">학교정보관리</a></li>
         </ul>
@@ -282,31 +294,51 @@
         </div>
       </div>
       <div class="main-box">
-        <img src="../img/calendar.png" alt="" />
-        <div class="main-box-title">
-          <h3>내 예약현황 보기</h3>
-        </div>
+        <a href="../my-reservation/my-reservation.html">
+          <img src="../img/calendar.png" alt="" />
+          <div class="main-box-title">
+            <h3>내 예약현황 보기</h3>
+          </div>
+        </a>
       </div>
       <div class="main-box">
-        <img src="../img/pizza-slice.png" alt="" />
-        <div class="main-box-title">
-          <h3>샘플주문하기</h3>
-        </div>
+        <a href="#">
+          <img src="../img/pizza-slice.png" alt="" />
+          <div class="main-box-title">
+            <h3>샘플주문하기</h3>
+          </div>
+        </a>
       </div>
       <div class="main-box">
-        <img src="../img/user.png" alt="" />
-        <div class="main-box-title">
-          <h3>학교정보관리</h3>
-        </div>
+        <a href="#">
+          <img src="../img/user.png" alt="" />
+          <div class="main-box-title">
+            <h3>학교정보관리</h3>
+          </div>
+        </a>
       </div>
     </main>
 
     <!-- footer -->
     <footer class="footer">
       <div class="fnb">
-        <ul>
+        <ul class="page-link">
           <li><a href="../etc/service.html">이용약관</a></li>
           <li><a href="../etc/privacy.html">개인정보처리방침</a></li>
+        </ul>
+        <ul class="sns-link">
+          <li>
+            <a href="#"><img src="../img/sns로고/ico_blog.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../img/sns로고/ico_facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../img/sns로고/ico_insta.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../img/sns로고/ico_you.svg" alt="" /></a>
+          </li>
         </ul>
       </div>
       <div class="footer-web">
@@ -317,8 +349,12 @@
           페이잇 주식회사 &nbsp; (대표 : 박진성)<br />
           주소: 경상북도 경산시 대학로 280, 창업보육센터 신관 212호(대동,
           영남대학교)
-          <br />사업자번호 : 176-88-01702<br />
-          통신판매업번호 : 제2021-대구수성구-0014호
+          <br />사업자번호 : 176-88-01702 | 통신판매업번호 :
+          제2021-대구수성구-0014호<br />
+
+          <p class="copyright">
+            Copyright &copy Payeat Corp. All Rights Reserved
+          </p>
         </div>
         <div class="footer-cs">
           <p>Contact</p>
@@ -329,8 +365,6 @@
           </ul>
         </div>
       </div>
-
-      <p class="copyright">Copyright &copy Payeat Corp. All Rights Reserved</p>
     </footer>
 
     <script src="../js/app.js"></script>

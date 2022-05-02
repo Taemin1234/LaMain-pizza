@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>LAMAIN - 라망</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 폰트어썸 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+    />
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <!-- 슬릭 슬라이더 -->
+    <script src="../slick-1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick.css" />
+
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="main-logo">
+          <a href="../reservation-page/reservation.html">
+            <img src="../img/logos/라망 가로.png" alt="" />
+          </a>
+        </div>
+
+        <div class="menu-slide-wrap-tab">
+          <ul>
+            <li class="call-calendar-tab">
+              <a href="../reservation-page/reservation.html">피자 예약하기</a>
+            </li>
+            <li><a href="#">내 예약 현황 보기</a></li>
+            <li><a href="#">샘플 주문하기</a></li>
+            <li><a href="#">학교정보관리</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-wrap">
+          <!-- 학교명, 학교 형태 구분  -->
+          <p class="btn-userinfo"><span>시지</span><span>초등학교</span>님</p>
+          <p class="btn-logout">Log out</p>
+          <img src="../img/menu-icon.svg" alt="" class="btn-menu" />
+        </div>
+      </nav>
+
+      <!-- 메뉴 슬라이드 -->
+      <div class="menu-slide-wrap">
+        <ul>
+          <li class="call-calendar">
+            <a href="../reservation-page/reservation.html">피자 예약하기</a>
+          </li>
+          <li><a href="./my-reservation.html">내 예약 현황 보기</a></li>
+          <li><a href="#">샘플 주문하기</a></li>
+          <li><a href="#">학교정보관리</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="reserv-detail-body-bg">
+      <div class="my-reserv-main">
+        <div class="my-reserv">
+          <div class="my-reserv-state">
+            <p class="visit-ready">방문 준비중</p>
+          </div>
+          <div class="my-reserv-contents">
+            <div class="my-reserv-img">
+              <img src="../img/menu/menu2.jpg" alt="" />
+            </div>
+            <div class="my-reserv-info">
+              <ul>
+                <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
+                <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+                <li><strong>주문자 </strong>: <span>noname</span></li>
+                <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-btn-wrap">
+            <button class="my-reserv-detail reserv-btn">
+              주문 내역 상세보기
+            </button>
+            <button class="review-write reserv-btn review-off">
+              리뷰 쓰기
+            </button>
+          </div>
+        </div>
+        <div class="my-reserv">
+          <div class="my-reserv-state">
+            <p class="visit-complete">방문 완료</p>
+          </div>
+          <div class="my-reserv-contents">
+            <div class="my-reserv-img">
+              <img src="../img/menu/menu2.jpg" alt="" />
+            </div>
+            <div class="my-reserv-info">
+              <ul>
+                <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
+                <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+                <li><strong>주문자 </strong>: <span>noname</span></li>
+                <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-btn-wrap">
+            <button class="my-reserv-detail reserv-btn">
+              주문 내역 상세보기
+            </button>
+            <button class="review-write reserv-btn">리뷰 쓰기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

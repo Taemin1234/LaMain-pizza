@@ -1340,54 +1340,7 @@ textarea.form-control.is-invalid {
 .navbar-dark .navbar-text a:hover {
   color: #fff;
 }
-.page-link {
-  position: relative;
-  display: block;
-  color: #ffc800;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .page-link {
-    transition: none;
-  }
-}
-.page-link:hover {
-  z-index: 2;
-  color: #cca000;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
-}
-.page-link:focus {
-  z-index: 3;
-  color: #cca000;
-  background-color: #e9ecef;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(255, 200, 0, 0.25);
-}
-.page-item:not(:first-child) .page-link {
-  margin-left: -1px;
-}
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-.page-link {
-  padding: 0.375rem 0.75rem;
-}
-.page-item:first-child .page-link {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-.page-item:last-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
+
 @-webkit-keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -3128,10 +3081,18 @@ section#team form#contactForm :-ms-input-placeholder {
 
 .app-store {
   width: 100%;
-  height: 88px;
+  height: 56px;
+
+  margin: 10px 0;
 }
 
 .app-store img {
+  width: 100%;
+  height: 100%;
+}
+
+.app-store a {
+  display: block;
   width: 100%;
   height: 100%;
 }
@@ -3184,10 +3145,10 @@ section#team form#contactForm :-ms-input-placeholder {
   position: sticky;
   bottom: 0;
   left: 100%;
-  width: 90%;
+  width: 75%;
   height: 60px;
 
-  border-radius: 50px 0px 00px 50px;
+  border-radius: 50px 0px 0px 50px;
   background-image: linear-gradient(to left, #db868d, #e70012);
   color: #fff;
 }
@@ -3225,13 +3186,17 @@ section#team form#contactForm :-ms-input-placeholder {
 }
 
 .reserv-text {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
 .reserv-text p {
+  position: absolute;
   width: 100%;
   height: 100%;
+
+  left: -33%;
 
   line-height: 60px;
 }
@@ -3277,6 +3242,7 @@ section#team form#contactForm :-ms-input-placeholder {
   }
 
   .reserv-text p {
+    left: 0;
     line-height: 150px;
   }
 }
@@ -3285,7 +3251,6 @@ section#team form#contactForm :-ms-input-placeholder {
 
 .footer {
   width: 100%;
-  height: 340px;
   padding: 0 15px;
   text-align: center;
   box-sizing: border-box;
@@ -3301,12 +3266,19 @@ section#team form#contactForm :-ms-input-placeholder {
   border-bottom: solid 1px #ddd;
   border-top: solid 1px #ddd;
   box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
 }
 .fnb ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
 
@@ -3319,8 +3291,13 @@ section#team form#contactForm :-ms-input-placeholder {
   color: #929191;
 }
 .fnb a {
+  display: block;
   color: inherit;
   text-decoration: none;
+}
+
+.fnb .sns-link li {
+  width: 20px;
 }
 
 .footer-web {
@@ -3343,7 +3320,7 @@ section#team form#contactForm :-ms-input-placeholder {
 .footer-contents {
   text-align: left;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 1px;
   padding-top: 16px;
   margin-right: 15px;
@@ -3371,6 +3348,7 @@ section#team form#contactForm :-ms-input-placeholder {
 
 .copyright {
   margin-top: 20px;
+  padding-bottom: 15px;
   font-size: 12px;
   letter-spacing: 1px;
 }

@@ -39,7 +39,7 @@ $(function () {
       $("footer").hide();
     });
 
-  $(".call-calendar").on("click", function () {
+  $(".call-calendar, .call-calender-tab").on("click", function () {
     $(".reserv-page").show();
     $(".main-contents").hide();
     $("footer").hide();
@@ -116,5 +116,21 @@ $(function () {
     num++;
 
     $(".amount").val(num);
+  });
+});
+
+// 내 예약 현황 보기
+
+// 활성화된 리뷰쓰기 누르면 리뷰창 슬라이드업
+
+$(function () {
+  $(".review-write").on("click", function () {
+    if ($(".review-write").hasClass("review-off") == true) {
+      $(".review-page").css({ bottom: 0 });
+    }
+  });
+
+  $(".review-close").on("click", function () {
+    $(".review-page").css({ bottom: "-100%" });
   });
 });

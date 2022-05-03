@@ -86,7 +86,7 @@
           </li>
           <li><a href="./my-reservation.html">내 예약 현황 보기</a></li>
           <li><a href="#">샘플 주문하기</a></li>
-          <li><a href="#">학교정보관리</a></li>
+          <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
         </ul>
       </div>
     </header>
@@ -102,8 +102,8 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
-                <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+                <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
+                <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
                 <li><strong>주문자 </strong>: <span>noname</span></li>
                 <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
               </ul>
@@ -129,8 +129,8 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
-                <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+                <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
+                <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
                 <li><strong>주문자 </strong>: <span>noname</span></li>
                 <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
               </ul>
@@ -149,20 +149,21 @@
       </div>
 
       <div class="review-page">
+        <div class="review-close"></div>
         <div class="my-reserv-contents">
           <div class="my-reserv-img">
             <img src="../img/menu/menu2.jpg" alt="" />
           </div>
           <div class="my-reserv-info">
             <ul>
-              <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
-              <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+              <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
+              <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
               <li><strong>주문자 </strong>: <span>noname</span></li>
               <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
             </ul>
           </div>
         </div>
-        <div class="star-rating">
+        <div class="review-box-wrap star-rating">
           <h3>이용은 어떠셨나요? 별점을 매겨주세요!</h3>
           <form name="myform" id="myform" method="post" action="./save">
             <fieldset>
@@ -189,7 +190,8 @@
             </fieldset>
           </form>
         </div>
-        <div class="checkbox_wrap">
+
+        <div class="review-box-wrap checkbox_wrap">
           <h3>어떤 점이 좋았나요??</h3>
           <label class="container-checkbox">
             기사님이 친절했어요!
@@ -204,17 +206,6 @@
           </label>
           <label class="container-checkbox">
             시간 맞춰 방문했어요!
-            <input
-              type="checkbox"
-              id="chk_agreea_all"
-              name="chk_agree_all"
-              value=""
-              onchange=""
-            />
-            <span class="checkmark"></span>
-          </label>
-          <label class="container-checkbox">
-            음식이 빠르게 나왔어요
             <input
               type="checkbox"
               id="chk_agreea_all"
@@ -247,6 +238,21 @@
             <span class="checkmark"></span>
           </label>
         </div>
+
+        <div class="review-box-wrap comment-box-wrap">
+          <h3>건의사항이나 하고싶은 말을 남겨주세요</h3>
+          <div class="comment-box">
+            <textarea
+              name=""
+              id="comment-input"
+              placeholder="메세지를 남겨주세요"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <button class="submit-review">리뷰 남기기</button>
       </div>
     </main>
 

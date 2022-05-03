@@ -115,6 +115,7 @@
             </button>
             <button class="review-write reserv-btn review-off">
               리뷰 쓰기
+              <i class="fa-solid fa-pen-to-square"></i>
             </button>
           </div>
         </div>
@@ -139,8 +140,112 @@
             <button class="my-reserv-detail reserv-btn">
               주문 내역 상세보기
             </button>
-            <button class="review-write reserv-btn">리뷰 쓰기</button>
+            <button class="review-write reserv-btn">
+              리뷰 쓰기
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
           </div>
+        </div>
+      </div>
+
+      <div class="review-page">
+        <div class="my-reserv-contents">
+          <div class="my-reserv-img">
+            <img src="../img/menu/menu2.jpg" alt="" />
+          </div>
+          <div class="my-reserv-info">
+            <ul>
+              <li><strong>주문 일자 </strong>: 2022년 5월 2일</li>
+              <li><strong>주문 장소 </strong>: <span>고산중학교</span></li>
+              <li><strong>주문자 </strong>: <span>noname</span></li>
+              <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+            </ul>
+          </div>
+        </div>
+        <div class="star-rating">
+          <h3>이용은 어떠셨나요? 별점을 매겨주세요!</h3>
+          <form name="myform" id="myform" method="post" action="./save">
+            <fieldset>
+              <input type="radio" name="rating" value="5" id="rate1" /><label
+                for="rate1"
+                >⭐</label
+              >
+              <input type="radio" name="rating" value="4" id="rate2" /><label
+                for="rate2"
+                >⭐</label
+              >
+              <input type="radio" name="rating" value="3" id="rate3" /><label
+                for="rate3"
+                >⭐</label
+              >
+              <input type="radio" name="rating" value="2" id="rate4" /><label
+                for="rate4"
+                >⭐</label
+              >
+              <input type="radio" name="rating" value="1" id="rate5" /><label
+                for="rate5"
+                >⭐</label
+              >
+            </fieldset>
+          </form>
+        </div>
+        <div class="checkbox_wrap">
+          <h3>어떤 점이 좋았나요??</h3>
+          <label class="container-checkbox">
+            기사님이 친절했어요!
+            <input
+              type="checkbox"
+              id="chk_agreea_all"
+              name="chk_agree_all"
+              value=""
+              onchange=""
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container-checkbox">
+            시간 맞춰 방문했어요!
+            <input
+              type="checkbox"
+              id="chk_agreea_all"
+              name="chk_agree_all"
+              value=""
+              onchange=""
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container-checkbox">
+            음식이 빠르게 나왔어요
+            <input
+              type="checkbox"
+              id="chk_agreea_all"
+              name="chk_agree_all"
+              value=""
+              onchange=""
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container-checkbox">
+            피자가 잘생겼어요
+            <input
+              type="checkbox"
+              id="chk_agreea_all"
+              name="chk_agree_all"
+              value=""
+              onchange=""
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container-checkbox">
+            이태리에 온 것 같은 맛이에요
+            <input
+              type="checkbox"
+              id="chk_agreea_all"
+              name="chk_agree_all"
+              value=""
+              onchange=""
+            />
+            <span class="checkmark"></span>
+          </label>
         </div>
       </div>
     </main>

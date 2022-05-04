@@ -121,6 +121,18 @@ $(function () {
 
 // 내 예약 현황 보기
 
+//주문 내역 버튼 클릭시 주문 내역 슬라이드업
+
+$(function () {
+  $(".my-reserv-detail").on("click", function () {
+    $(".detail-contents-wrap").css({ bottom: 0 });
+  });
+
+  $(".review-close").on("click", function () {
+    $(".detail-contents-wrap").css({ bottom: "-100%" });
+  });
+});
+
 // 활성화된 리뷰쓰기 누르면 리뷰창 슬라이드업
 
 $(function () {
@@ -133,4 +145,19 @@ $(function () {
   $(".review-close").on("click", function () {
     $(".review-page").css({ bottom: "-100%" });
   });
+});
+
+// 학교정보관리 마이페이지
+
+$(function () {
+  for (var i = 0; i < 4; i++) {
+    $(".quant-img-wrap").hover(
+      function () {
+        $(".ic-plus").eq(i).show();
+      },
+      function () {
+        $(".ic-plus").eq(i).hide();
+      }
+    );
+  }
 });

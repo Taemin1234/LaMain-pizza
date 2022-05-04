@@ -197,7 +197,8 @@ ol {
     position: absolute;
     display: flex;
     border-radius: 3px;
-    background: $theme-color;
+    background: #f76d00;
+
     padding: 3% 2%;
     width: 65%;
     height: 47px;
@@ -207,11 +208,11 @@ ol {
 
     justify-content: center;
     align-items: center;
-    color: #391b1a;
 
     a {
       @extend %flex-center;
       font-size: 16px;
+      color: #fff;
     }
   }
   .login_data101 img {
@@ -931,17 +932,17 @@ header {
     height: 60px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
+    color: $theme-color;
 
-    background-color: $theme-color;
+    background-color: #fff;
     border: solid 1px $theme-color;
     border-radius: 3px;
 
     cursor: pointer;
 
     &:hover {
-      background-color: #fff;
-      color: $theme-color;
+      background-color: $theme-color;
+      color: #fff;
     }
   }
 }
@@ -1042,12 +1043,13 @@ header {
 
 //피자 수량 선택 페이지
 
-.select-quantity-page {
+.slide-up-box {
   position: fixed;
   bottom: -100%;
   left: 50%;
   transform: translateX(-50%);
 
+  max-width: 500px;
   width: 500px;
 
   height: 92vh;
@@ -1066,7 +1068,7 @@ header {
   z-index: 10;
 }
 
-.select-quantity-page::-webkit-scrollbar {
+.slide-up-box::-webkit-scrollbar {
   display: none;
 }
 
@@ -1131,23 +1133,37 @@ header {
   margin-bottom: 20px;
 
   border-bottom: solid 2px rgb(239 239 239);
+}
+
+.quant-img-wrap {
+  position: relative;
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
 
   img {
-    width: 130px;
-    height: 100px;
-    object-fit: cover;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 10px;
-    }
+    width: 100%;
+    height: 100%;
   }
+
+  // .ic-plus {
+  //   position: absolute;
+
+  //   display: none;
+
+  //   color: #fff;
+  //   width: 50px;
+  //   height: 50px;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
 }
 
 .info-quantity {
   @extend %flex-between;
 
-  width: 100%;
+  width: calc(100% - 130px);
   padding-right: 10px;
   margin-left: 20px;
 
@@ -1242,19 +1258,21 @@ header {
 
 .my-reserv {
   width: 100%;
-  margin: 20px 0;
+  margin: 30px 0;
+  padding: 0 20px 20px;
 
-  border-bottom: solid 1px $sub-color;
+  background-color: #eee;
 }
 
 .my-reserv-state {
   width: 100%;
   height: 50px;
 
+  border-bottom: solid 1px $sub-color;
+
   p {
     height: 100%;
     padding: 10px;
-    background-color: #ebebeb;
 
     font-size: 20px;
 
@@ -1297,7 +1315,7 @@ header {
   height: 60px;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: #7a7a7a !important;
 
   border-radius: 3px;
 
@@ -1306,32 +1324,73 @@ header {
   pointer-events: none;
 }
 
+// 내 예약 현황 - 주문내역 상세보기
+
+.detail-contents-wrap {
+  h2 {
+    margin: 0 0 20px;
+    font-weight: bold;
+  }
+}
+
+.detail-contents {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eee;
+
+  table {
+    width: 100%;
+
+    border: solid 1px #adadad;
+    //adadad
+    border-collapse: collapse;
+  }
+
+  tbody {
+    width: 100%;
+
+    tr {
+      padding: 15px;
+      border: solid 1px #adadad;
+    }
+
+    td {
+      padding: 15px;
+      border: solid 1px #adadad;
+    }
+  }
+}
+
+.menu-detail {
+  width: 100%;
+
+  padding: 20px;
+  margin-top: 10px;
+
+  background-color: #eee;
+}
+
+.detail-price {
+  @extend %flex-between;
+  margin-bottom: 20px;
+}
+
+.total-detail-price {
+  border-top: solid 1px #000;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  padding-top: 10px;
+
+  text-align: right;
+}
+
 // 내 예약현황 - 리뷰쓰기
 
 .review-page {
-  position: fixed;
-
-  bottom: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  max-width: 500px;
-  width: 500px;
-
   height: 91vh;
-  padding: 20px;
-
-  margin: 0 auto;
-
-  background-color: #fff;
-
-  box-sizing: border-box;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  transition: all, 500ms;
-  z-index: 10;
 
   .my-reserv-contents {
     margin-top: 20px;
@@ -1379,7 +1438,6 @@ header {
 
   h3 {
     padding: 10px 0;
-    //margin: 10px 0;
 
     border-top: solid 2px $border-color;
   }

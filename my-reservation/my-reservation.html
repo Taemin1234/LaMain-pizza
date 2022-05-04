@@ -64,9 +64,9 @@
             <li class="call-calendar-tab">
               <a href="../reservation-page/reservation.html">피자 예약하기</a>
             </li>
-            <li><a href="#">내 예약 현황 보기</a></li>
+            <li><a href="./my-reservation.html">내 예약 현황 보기</a></li>
             <li><a href="#">샘플 주문하기</a></li>
-            <li><a href="#">학교정보관리</a></li>
+            <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
           </ul>
         </div>
 
@@ -102,10 +102,15 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
-                <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
-                <li><strong>주문자 </strong>: <span>noname</span></li>
-                <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+                <li><strong>방문 일자 </strong>&nbsp;:&nbsp; 2022년 5월 2일</li>
+                <li>
+                  <strong>방문 장소 </strong>&nbsp;:&nbsp;
+                  <span>고산중학교</span>
+                </li>
+                <li>
+                  <strong>주문자 </strong>&nbsp; : &nbsp;<span>noname</span>
+                </li>
+                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
               </ul>
             </div>
           </div>
@@ -129,10 +134,45 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
-                <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
-                <li><strong>주문자 </strong>: <span>noname</span></li>
-                <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+                <li><strong>방문 일자 </strong>&nbsp;: &nbsp;2022년 4월 2일</li>
+                <li>
+                  <strong>방문 장소 </strong>&nbsp;: &nbsp;<span
+                    >고산중학교</span
+                  >
+                </li>
+                <li><strong>주문자 </strong>&nbsp;: <span>noname</span></li>
+                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-btn-wrap">
+            <button class="my-reserv-detail reserv-btn">
+              주문 내역 상세보기
+            </button>
+            <button class="review-write reserv-btn">
+              리뷰 쓰기
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          </div>
+        </div>
+        <div class="my-reserv">
+          <div class="my-reserv-state">
+            <p class="visit-complete">방문 완료</p>
+          </div>
+          <div class="my-reserv-contents">
+            <div class="my-reserv-img">
+              <img src="../img/menu/menu2.jpg" alt="" />
+            </div>
+            <div class="my-reserv-info">
+              <ul>
+                <li><strong>방문 일자 </strong>&nbsp;: &nbsp;2022년 3월 2일</li>
+                <li>
+                  <strong>방문 장소 </strong>&nbsp;: &nbsp;<span
+                    >휘문고등학교</span
+                  >
+                </li>
+                <li><strong>주문자 </strong>&nbsp;: <span>noname</span></li>
+                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
               </ul>
             </div>
           </div>
@@ -148,7 +188,56 @@
         </div>
       </div>
 
-      <div class="review-page">
+      <!-- 주문내역 상세보기 슬라이드업 -->
+      <div class="detail-contents-wrap slide-up-box">
+        <div class="review-close"></div>
+        <div class="detail-contents">
+          <h2>주문 상세 내역</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>방문일자</td>
+                <td>2022년 5월 2일</td>
+              </tr>
+              <tr>
+                <td>방문 장소</td>
+                <td>고산중학교</td>
+              </tr>
+              <tr>
+                <td>주문자</td>
+                <td>noname</td>
+              </tr>
+              <tr>
+                <td>방문</td>
+                <td>방문완료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="menu-detail">
+          <h2>주문 내용</h2>
+          <div class="detail-price">
+            <p>
+              프리미엄 피자 (14,500원) <span class="option-content">|</span>
+              <span>20판</span>
+            </p>
+            <p>금액 : <span>290,000</span>원</p>
+          </div>
+          <div class="detail-price">
+            <p>
+              프리미엄 불고기 피자 (15,500원)
+              <span class="option-content">|</span> <span>60판</span>
+            </p>
+            <p>금액 : <span>930,000</span>원</p>
+          </div>
+          <div class="total-detail-price">
+            총 금액 &nbsp; : &nbsp; <span>1,220,000</span>원
+          </div>
+        </div>
+      </div>
+
+      <!-- 리뷰쓰기 클릭 시 리뷰쓰기 -->
+      <div class="review-page slide-up-box">
         <div class="review-close"></div>
         <div class="my-reserv-contents">
           <div class="my-reserv-img">

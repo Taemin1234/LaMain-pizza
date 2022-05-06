@@ -95,27 +95,68 @@ $(function () {
 
 // 수량 증가, 감소
 $(function () {
-  $(".minus-amount").on("click", function (e) {
-    e.preventDefault();
-    var stat = $(".amount").val();
-    var num = parseInt(stat, 10);
-    num--;
+  $(this)
+    .find(".minus-amount")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this).siblings(".amount").val();
+      var num = parseInt(stat, 10);
+      num--;
 
-    if (num <= -1) {
-      alert("최소 수량은 0입니다.");
-      num = 0;
-    }
+      if (num <= -1) {
+        alert("최소 수량은 0입니다.");
+        num = 0;
+      }
 
-    $(".amount").val(num);
-  });
+      $(this).siblings(".amount").val(num);
+    });
 
-  $(".plus-amount").on("click", function (e) {
-    e.preventDefault();
-    var stat = $(".amount").val();
-    var num = parseInt(stat, 10);
-    num++;
+  $(this)
+    .find(".plus-amount")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this).siblings(".amount").val();
+      var num = parseInt(stat, 10);
+      num++;
 
-    $(".amount").val(num);
+      $(this).siblings(".amount").val(num);
+    });
+
+  // 10개씩 증가
+  $(this)
+    .find(".plus-10")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this)
+        .parents()
+        .children(".one-input")
+        .children(".amount")
+        .val();
+      var num = parseInt(stat, 10);
+      num += 10;
+
+      $(this).parents().children(".one-input").children(".amount").val(num);
+    });
+
+  //100개 씩 증가
+  $(this)
+    .find(".plus-100")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this)
+        .parents()
+        .children(".one-input")
+        .children(".amount")
+        .val();
+      var num = parseInt(stat, 10);
+      num += 100;
+
+      $(this).parents().children(".one-input").children(".amount").val(num);
+    });
+
+  $(".amount").on("change", function () {
+    console.log(1);
+    //$(".total-amount span").val("50");
   });
 });
 
@@ -148,16 +189,3 @@ $(function () {
 });
 
 // 학교정보관리 마이페이지
-
-$(function () {
-  for (var i = 0; i < 4; i++) {
-    $(".quant-img-wrap").hover(
-      function () {
-        $(".ic-plus").eq(i).show();
-      },
-      function () {
-        $(".ic-plus").eq(i).hide();
-      }
-    );
-  }
-});

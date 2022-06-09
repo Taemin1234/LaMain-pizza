@@ -65,7 +65,9 @@
               <a href="../reservation-page/reservation.html">피자 예약하기</a>
             </li>
             <li><a href="./my-reservation.html">내 예약 현황 보기</a></li>
-            <li><a href="#">샘플 주문하기</a></li>
+            <li>
+              <a href="../sample-order/sample-order.html">샘플 주문하기</a>
+            </li>
             <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
           </ul>
         </div>
@@ -85,7 +87,7 @@
             <a href="../reservation-page/reservation.html">피자 예약하기</a>
           </li>
           <li><a href="./my-reservation.html">내 예약 현황 보기</a></li>
-          <li><a href="#">샘플 주문하기</a></li>
+          <li><a href="../sample-order/sample-order.html">샘플 주문하기</a></li>
           <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
         </ul>
       </div>
@@ -102,15 +104,13 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>방문 일자 </strong>&nbsp;:&nbsp; 2022년 5월 2일</li>
+                <li>방문 예정일 &nbsp;:&nbsp; 2022년 5월 2일</li>
                 <li>
-                  <strong>방문 장소 </strong>&nbsp;:&nbsp;
+                  방문 장소 &nbsp;:&nbsp;
                   <span>고산중학교</span>
                 </li>
-                <li>
-                  <strong>주문자 </strong>&nbsp; : &nbsp;<span>noname</span>
-                </li>
-                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
+                <li>주문자 &nbsp; : &nbsp;<span>noname</span></li>
+                <li>주문 내역 &nbsp;: &nbsp;불고기 피자 외</li>
               </ul>
             </div>
           </div>
@@ -134,14 +134,10 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>방문 일자 </strong>&nbsp;: &nbsp;2022년 4월 2일</li>
-                <li>
-                  <strong>방문 장소 </strong>&nbsp;: &nbsp;<span
-                    >고산중학교</span
-                  >
-                </li>
-                <li><strong>주문자 </strong>&nbsp;: <span>noname</span></li>
-                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
+                <li>방문 예정일 &nbsp;: &nbsp;2022년 4월 2일</li>
+                <li>방문 장소 &nbsp;: &nbsp;<span>고산중학교</span></li>
+                <li>주문자 &nbsp;: <span>noname</span></li>
+                <li>주문 내역 &nbsp;: &nbsp;불고기 피자 외</li>
               </ul>
             </div>
           </div>
@@ -165,14 +161,10 @@
             </div>
             <div class="my-reserv-info">
               <ul>
-                <li><strong>방문 일자 </strong>&nbsp;: &nbsp;2022년 3월 2일</li>
-                <li>
-                  <strong>방문 장소 </strong>&nbsp;: &nbsp;<span
-                    >휘문고등학교</span
-                  >
-                </li>
-                <li><strong>주문자 </strong>&nbsp;: <span>noname</span></li>
-                <li><strong>주문 내역 </strong>&nbsp;: &nbsp;불고기 피자 외</li>
+                <li>방문 예정일 &nbsp;: &nbsp;2022년 3월 2일</li>
+                <li>방문 장소 &nbsp;: &nbsp;<span>휘문고등학교</span></li>
+                <li>주문자 &nbsp;: <span>noname</span></li>
+                <li>주문 내역 &nbsp;: &nbsp;불고기 피자 외</li>
               </ul>
             </div>
           </div>
@@ -196,7 +188,7 @@
           <table>
             <tbody>
               <tr>
-                <td>방문일자</td>
+                <td>방문예정일</td>
                 <td>2022년 5월 2일</td>
               </tr>
               <tr>
@@ -245,10 +237,10 @@
           </div>
           <div class="my-reserv-info">
             <ul>
-              <li><strong>방문 일자 </strong>: 2022년 5월 2일</li>
-              <li><strong>방문 장소 </strong>: <span>고산중학교</span></li>
-              <li><strong>주문자 </strong>: <span>noname</span></li>
-              <li><strong>주문 내역 </strong>: 불고기 피자 외</li>
+              <li>방문 예정일 : 2022년 5월 2일</li>
+              <li>방문 장소 : <span>고산중학교</span></li>
+              <li>주문자 : <span>noname</span></li>
+              <li>주문 내역 : 불고기 피자 외</li>
             </ul>
           </div>
         </div>
@@ -284,47 +276,151 @@
           <h3>어떤 점이 좋았나요??</h3>
           <label class="container-checkbox">
             기사님이 친절했어요!
-            <input
-              type="checkbox"
-              id="chk_agreea_all"
-              name="chk_agree_all"
-              value=""
-              onchange=""
-            />
-            <span class="checkmark"></span>
+            <form name="myform" id="myform" method="post" action="./save">
+              <fieldset>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  id="a-rate1"
+                /><label for="a-rate1">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  id="a-rate2"
+                /><label for="a-rate2">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  id="a-rate3"
+                /><label for="a-rate3">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  id="a-rate4"
+                /><label for="a-rate4">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  id="a-rate5"
+                /><label for="a-rate5">⭐</label>
+              </fieldset>
+            </form>
           </label>
           <label class="container-checkbox">
             시간 맞춰 방문했어요!
-            <input
-              type="checkbox"
-              id="chk_agreea_all"
-              name="chk_agree_all"
-              value=""
-              onchange=""
-            />
-            <span class="checkmark"></span>
+            <form name="myform" id="myform" method="post" action="./save">
+              <fieldset>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  id="b-rate1"
+                /><label for="b-rate1">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  id="b-rate2"
+                /><label for="b-rate2">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  id="b-rate3"
+                /><label for="b-rate3">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  id="b-rate4"
+                /><label for="b-rate4">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  id="b-rate5"
+                /><label for="b-rate5">⭐</label>
+              </fieldset>
+            </form>
           </label>
           <label class="container-checkbox">
             피자가 잘생겼어요
-            <input
-              type="checkbox"
-              id="chk_agreea_all"
-              name="chk_agree_all"
-              value=""
-              onchange=""
-            />
-            <span class="checkmark"></span>
+            <form name="myform" id="myform" method="post" action="./save">
+              <fieldset>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  id="c-rate1"
+                /><label for="c-rate1">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  id="c-rate2"
+                /><label for="c-rate2">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  id="c-rate3"
+                /><label for="c-rate3">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  id="c-rate4"
+                /><label for="c-rate4">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  id="c-rate5"
+                /><label for="c-rate5">⭐</label>
+              </fieldset>
+            </form>
           </label>
           <label class="container-checkbox">
             이태리에 온 것 같은 맛이에요
-            <input
-              type="checkbox"
-              id="chk_agreea_all"
-              name="chk_agree_all"
-              value=""
-              onchange=""
-            />
-            <span class="checkmark"></span>
+            <form name="myform" id="myform" method="post" action="./save">
+              <fieldset>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="5"
+                  id="d-rate1"
+                /><label for="d-rate1">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="4"
+                  id="d-rate2"
+                /><label for="d-rate2">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="3"
+                  id="d-rate3"
+                /><label for="d-rate3">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="2"
+                  id="d-rate4"
+                /><label for="d-rate4">⭐</label>
+                <input
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  id="d-rate5"
+                /><label for="d-rate5">⭐</label>
+              </fieldset>
+            </form>
           </label>
         </div>
 

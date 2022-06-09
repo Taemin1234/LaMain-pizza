@@ -490,7 +490,6 @@ ol {
 }
 .login_box .login-title {
   text-align: center;
-  margin-top: 15px;
 }
 .login_box .login_kakao {
   position: absolute;
@@ -500,7 +499,7 @@ ol {
   padding: 3% 2%;
   width: 65%;
   height: 47px;
-  top: 65%;
+  top: 62%;
   left: 50%;
   transform: translate(-50%, -50%);
   justify-content: center;
@@ -519,7 +518,7 @@ ol {
   padding: 3% 2%;
   width: 65%;
   height: 47px;
-  top: 88%;
+  top: 84%;
   left: 50%;
   transform: translate(-50%, -50%);
   justify-content: center;
@@ -536,7 +535,7 @@ ol {
 
 .customer-center {
   width: 100%;
-  height: 33%;
+  height: 40%;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -561,6 +560,11 @@ ol {
   font-size: 80%;
 }
 
+@media (min-width: 480px) {
+  .login-box .login-title {
+    margin-top: 15px;
+  }
+}
 @media (min-width: 768px) {
   .bg {
     position: relative;
@@ -574,7 +578,7 @@ ol {
 
   .login-wrap {
     width: 350px;
-    height: 490px;
+    height: 520px;
   }
 
   .login_box .login_kakao,
@@ -634,12 +638,13 @@ header {
 
 .menu-wrap .btn-userinfo {
   margin-right: 10px;
+  font-size: 3.2vw;
 }
 .menu-wrap .btn-userinfo .userhead {
   font-weight: bold;
 }
 .menu-wrap .btn-logout {
-  font-size: 16px;
+  font-size: 3.2vw;
   font-weight: bold;
   width: 70px;
   padding: 5px;
@@ -656,6 +661,14 @@ header {
   cursor: pointer;
 }
 
+@media (min-width: 500px) {
+  .menu-wrap .btn-userinfo {
+    font-size: 16px;
+  }
+  .menu-wrap .btn-logout {
+    font-size: 16px;
+  }
+}
 @media (min-width: 992px) {
   .main-logo {
     width: 120px;
@@ -942,13 +955,12 @@ header {
 .main-contents {
   max-width: 1320px;
   position: relative;
-  height: 100vh;
   display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
   grid-gap: 30px;
   justify-content: center;
   align-content: center;
+  padding: 90px 0;
 }
 
 .main-box {
@@ -984,6 +996,14 @@ header {
   color: #3f5d67;
 }
 
+@media (min-width: 480px) {
+  .main-contents {
+    height: 100vh;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    padding: 0;
+  }
+}
 @media (min-width: 992px) {
   .main-contents {
     margin: 0 auto;
@@ -1016,7 +1036,7 @@ header {
 }
 
 .food-img-wrap {
-  width: 500px;
+  width: 100%;
   height: 400px;
   margin: 0 auto;
   overflow: hidden;
@@ -1067,7 +1087,7 @@ header {
 }
 
 .order-detail-wrap {
-  width: 500px;
+  width: 100%;
   padding: 20px;
   margin: 0 auto;
   background-color: #fff;
@@ -1112,7 +1132,7 @@ header {
 }
 
 .detail-info-wrap {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   background-color: rgb(229, 229, 229);
 }
@@ -1122,7 +1142,7 @@ header {
   position: fixed;
   bottom: 0;
   display: none;
-  width: 500px;
+  width: 100%;
   height: 60px;
   font-size: 20px;
   font-weight: bold;
@@ -1146,7 +1166,7 @@ header {
   width: 100%;
 }
 .youtube-content iframe {
-  width: 500px;
+  width: 100%;
   height: 300px;
 }
 
@@ -1183,6 +1203,27 @@ header {
   margin: 10px 0;
 }
 
+@media (min-width: 500px) {
+  .food-img-wrap {
+    width: 500px;
+  }
+
+  .order-detail-wrap {
+    width: 500px;
+  }
+
+  .detail-info-wrap {
+    width: 500px;
+  }
+
+  .order-btn-float {
+    width: 500px;
+  }
+
+  .youtube-content iframe {
+    width: 500px;
+  }
+}
 .slide-up-box {
   position: fixed;
   bottom: -100%;
@@ -1274,6 +1315,7 @@ header {
 }
 .info-quantity .quant-info-txt h4 {
   margin-bottom: 10px;
+  font-size: 3vw;
 }
 .info-quantity .quantity-input-wrap {
   width: 113px;
@@ -1306,7 +1348,7 @@ header {
 }
 
 .total-amount {
-  width: 430px;
+  max-width: 430px;
   height: 50px;
   background-color: #e70012;
   color: #fff;
@@ -1323,6 +1365,11 @@ header {
   color: #e70012;
 }
 
+@media (min-width: 500px) {
+  .info-quantity .quant-info-txt h4 {
+    font-size: 16px;
+  }
+}
 /* 내 예약 현황 보기*/
 .my-reserv-main {
   max-width: 500px;
@@ -1981,6 +2028,13 @@ input.textbox {
   font-size: 22px;
   line-height: 34px;
   font-weight: 700;
+}
+
+.sample-order-wrap {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 9vh;
 }
 
 /* footer */

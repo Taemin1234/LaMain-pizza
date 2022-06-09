@@ -3206,7 +3206,7 @@ section#team form#contactForm :-ms-input-placeholder {
     width: 150px;
     height: 150px;
 
-    left: 90%;
+    left: 86%;
     bottom: 30px;
 
     border-radius: 50%;
@@ -3270,7 +3270,7 @@ section#team form#contactForm :-ms-input-placeholder {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   align-content: flex-start;
 }
@@ -3309,7 +3309,7 @@ section#team form#contactForm :-ms-input-placeholder {
 }
 
 .footer-logo {
-  width: 20%;
+  width: 16%;
   height: 100%;
   display: none;
 }
@@ -3372,12 +3372,24 @@ section#team form#contactForm :-ms-input-placeholder {
     display: block;
   }
 
+  .footer-logo img {
+    filter: invert(1);
+  }
+
   .footer-contents {
-    width: 40%;
+    width: 43%;
   }
 
   .footer-cs {
     width: 30%;
+  }
+
+  .fnb .sns-link li {
+    width: 28px;
+  }
+
+  .sns-link li img {
+    width: 100%;
   }
 }
 

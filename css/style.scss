@@ -166,7 +166,6 @@ ol {
 
   .login-title {
     text-align: center;
-    margin-top: 15px;
   }
   .login_kakao {
     position: absolute;
@@ -176,7 +175,7 @@ ol {
     padding: 3% 2%;
     width: 65%;
     height: 47px;
-    top: 65%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -202,7 +201,7 @@ ol {
     padding: 3% 2%;
     width: 65%;
     height: 47px;
-    top: 88%;
+    top: 84%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -223,7 +222,7 @@ ol {
 
 .customer-center {
   width: 100%;
-  height: 33%;
+  height: 40%;
   padding: 20px;
   box-sizing: border-box;
 
@@ -250,6 +249,14 @@ ol {
   font-size: 80%;
 }
 
+@media (min-width: 480px) {
+  .login-box {
+    .login-title {
+      margin-top: 15px;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .bg {
     position: relative;
@@ -264,7 +271,7 @@ ol {
 
   .login-wrap {
     width: 350px;
-    height: 490px;
+    height: 520px;
   }
 
   .login_box {
@@ -339,13 +346,14 @@ header {
 
   .btn-userinfo {
     margin-right: 10px;
+    font-size: 3.2vw;
 
     .userhead {
       font-weight: bold;
     }
   }
   .btn-logout {
-    font-size: 16px;
+    font-size: 3.2vw;
     font-weight: bold;
     width: 70px;
 
@@ -364,6 +372,17 @@ header {
 
 .btn-menu {
   cursor: pointer;
+}
+
+@media (min-width: 500px) {
+  .menu-wrap {
+    .btn-userinfo {
+      font-size: 16px;
+    }
+    .btn-logout {
+      font-size: 16px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -736,15 +755,15 @@ header {
   max-width: 1320px;
 
   position: relative;
-  height: 100vh;
 
   display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
   grid-gap: 30px;
 
   justify-content: center;
   align-content: center;
+
+  padding: 90px 0;
 }
 
 .main-box {
@@ -790,6 +809,17 @@ header {
   }
 }
 
+@media (min-width: 480px) {
+  .main-contents {
+    height: 100vh;
+
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+
+    padding: 0;
+  }
+}
+
 @media (min-width: 992px) {
   .main-contents {
     margin: 0 auto;
@@ -830,7 +860,7 @@ header {
 }
 
 .food-img-wrap {
-  width: 500px;
+  width: 100%;
   height: 400px;
 
   margin: 0 auto;
@@ -887,7 +917,7 @@ header {
 }
 
 .order-detail-wrap {
-  width: 500px;
+  width: 100%;
 
   padding: 20px;
   margin: 0 auto;
@@ -946,7 +976,7 @@ header {
 
 //피자 상세 설명 페이지
 .detail-info-wrap {
-  width: 500px;
+  width: 100%;
 
   margin: 0 auto;
 
@@ -960,7 +990,7 @@ header {
 
   display: none;
 
-  width: 500px;
+  width: 100%;
   height: 60px;
 
   font-size: 20px;
@@ -991,7 +1021,7 @@ header {
   width: 100%;
 
   iframe {
-    width: 500px;
+    width: 100%;
     height: 300px;
   }
 }
@@ -1035,6 +1065,30 @@ header {
 
   li {
     margin: 10px 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .food-img-wrap {
+    width: 500px;
+  }
+
+  .order-detail-wrap {
+    width: 500px;
+  }
+
+  .detail-info-wrap {
+    width: 500px;
+  }
+
+  .order-btn-float {
+    width: 500px;
+  }
+
+  .youtube-content {
+    iframe {
+      width: 500px;
+    }
   }
 }
 
@@ -1166,6 +1220,7 @@ header {
   .quant-info-txt {
     h4 {
       margin-bottom: 10px;
+      font-size: 3vw;
     }
   }
 
@@ -1215,7 +1270,7 @@ header {
 }
 
 .total-amount {
-  width: 430px;
+  max-width: 430px;
   height: 50px;
 
   background-color: $theme-color;
@@ -1235,6 +1290,16 @@ header {
   &:hover {
     background-color: #fff;
     color: $theme-color;
+  }
+}
+
+@media (min-width: 500px) {
+  .info-quantity {
+    .quant-info-txt {
+      h4 {
+        font-size: 16px;
+      }
+    }
   }
 }
 
@@ -1971,6 +2036,15 @@ input.textbox {
     line-height: 34px;
     font-weight: 700;
   }
+}
+
+.sample-order-wrap {
+  background-color: #fff;
+
+  max-width: 500px;
+
+  margin: 0 auto;
+  padding-top: 9vh;
 }
 
 /* footer */

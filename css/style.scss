@@ -398,7 +398,7 @@ header {
 // 메뉴 슬라이드
 .menu-slide-wrap {
   position: fixed;
-  top: 80px;
+  top: 59px;
   height: 140xp;
   width: 100%;
 
@@ -955,7 +955,7 @@ header {
   margin: 20px auto;
 
   .reserv-btn {
-    width: 180px;
+    width: 150px;
     height: 50px;
     font-size: 16px;
     font-weight: bold;
@@ -1032,7 +1032,7 @@ header {
 }
 
 .product-info {
-  width: 500px;
+  width: 100%;
   border-radius: 3px;
   padding: 30px;
   margin-top: 40px;
@@ -1047,10 +1047,11 @@ header {
 
   p {
     margin: 25px 0;
+    font-size: 17px;
   }
 
   img {
-    width: 430px;
+    width: 100%;
 
     box-sizing: border-box;
   }
@@ -1073,6 +1074,12 @@ header {
     width: 500px;
   }
 
+  .order-btn-wrap {
+    .reserv-btn {
+      width: 180px;
+    }
+  }
+
   .order-detail-wrap {
     width: 500px;
   }
@@ -1090,6 +1097,14 @@ header {
       width: 500px;
     }
   }
+
+  .product-info {
+    width: 100%;
+
+    img {
+      width: 430px;
+    }
+  }
 }
 
 //피자 수량 선택 페이지
@@ -1101,7 +1116,7 @@ header {
   transform: translateX(-50%);
 
   max-width: 500px;
-  width: 500px;
+  width: 100%;
 
   height: 92vh;
   padding: 20px;
@@ -1149,7 +1164,7 @@ header {
 }
 
 .recommend-quantity {
-  width: 460px;
+  width: 100%;
   height: 80px;
   padding: 14px 10px 10px;
   margin: 30px auto;
@@ -1187,10 +1202,9 @@ header {
 
 .quant-img-wrap {
   position: relative;
-  width: 130px;
-  height: 100px;
+  width: 110px;
+  height: 85px;
   object-fit: cover;
-
   img {
     width: 100%;
     height: 100%;
@@ -1225,7 +1239,7 @@ header {
   }
 
   .quantity-input-wrap {
-    width: 113px;
+    width: 90px;
 
     padding: 3px;
 
@@ -1294,11 +1308,28 @@ header {
 }
 
 @media (min-width: 500px) {
+  .slide-up-box {
+    width: 500px;
+  }
+
+  .recommend-quantity {
+    width: 460px;
+  }
+
+  .quant-img-wrap {
+    width: 100%;
+    height: 100%;
+  }
+
   .info-quantity {
     .quant-info-txt {
       h4 {
         font-size: 16px;
       }
+    }
+
+    .quantity-input-wrap {
+      width: 110px;
     }
   }
 }
@@ -1431,6 +1462,7 @@ header {
 .detail-price {
   @extend %flex-between;
   margin-bottom: 20px;
+  font-size: 3vw;
 }
 
 .total-detail-price {
@@ -1514,7 +1546,7 @@ header {
   display: none;
 }
 #myform label {
-  font-size: 3em; /* 이모지 크기 */
+  font-size: 2.5rem; /* 이모지 크기 */
   color: transparent; /* 기존 이모지 컬러 제거 */
   text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
 
@@ -1550,8 +1582,12 @@ header {
     cursor: pointer;
   }
 
+  #myform fieldset {
+    width: 172px;
+  }
+
   #myform label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1568,6 +1604,26 @@ header {
 
     border: solid 1px #000;
     border-radius: 3px;
+  }
+}
+
+@media (min-width: 500px) {
+  .detail-price {
+    font-size: 16px;
+  }
+
+  #myform fieldset {
+    width: auto;
+  }
+
+  #myform label {
+    font-size: 3rem;
+  }
+
+  .container-checkbox {
+    #myform label {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -1660,7 +1716,7 @@ header {
 }
 
 .w460 {
-  width: 460px;
+  width: 100%;
   max-width: 460px;
 
   margin: 0 auto;
@@ -1818,10 +1874,16 @@ input.textbox {
   content: "";
   display: inline-block;
   width: 1px;
-  height: 18px;
+  height: 35px;
   margin: 2px 16px 0 16px;
   vertical-align: 0px;
   background-color: #aaa;
+}
+
+@media (min-width: 424px) {
+  .pipe2:before {
+    height: 18px !important;
+  }
 }
 
 .join_sort {
@@ -1833,6 +1895,10 @@ input.textbox {
   align-items: center;
   justify-content: center;
   margin-top: 5px;
+
+  ul {
+    line-height: 1.5;
+  }
 
   li {
     padding-right: 3px;

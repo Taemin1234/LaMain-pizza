@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>LAMAIN - 라망</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 폰트어썸 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+    />
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jquery -->
+
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <!-- 슬릭 슬라이더 -->
+    <script src="../slick-1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick.css" />
+
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="main-logo">
+          <a href="../index.html">
+            <img src="../img/logos/라망 가로.png" alt="" />
+          </a>
+        </div>
+
+        <div class="menu-slide-wrap-tab">
+          <ul>
+            <li class="call-calendar-tab">
+              <a href="../reservation-page/reservation.html">피자 예약하기</a>
+            </li>
+            <li>
+              <a href="../my-reservation/my-reservation.html"
+                >내 예약 현황 보기</a
+              >
+            </li>
+            <li class="active">
+              <a href="./sample-order.html">샘플 주문하기</a>
+            </li>
+            <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-wrap">
+          <!-- 학교명, 학교 형태 구분  -->
+          <p class="btn-userinfo"><span>시지</span><span>초등학교</span>님</p>
+          <p class="btn-logout">Log out</p>
+          <img src="../img/menu-icon.svg" alt="" class="btn-menu" />
+        </div>
+      </nav>
+
+      <!-- 메뉴 슬라이드 -->
+      <div class="menu-slide-wrap">
+        <ul>
+          <li class="call-calendar">
+            <a href="../reservation-page/reservation.html">피자 예약하기</a>
+          </li>
+          <li>
+            <a href="../my-reservation/my-reservation.html"
+              >내 예약 현황 보기</a
+            >
+          </li>
+          <li><a href="./sample-order.html">샘플 주문하기</a></li>
+          <li><a href="../info-manage/info-manage.html">학교정보관리</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="reserv-detail-body-bg">
+      <div class="sample-order-wrap">
+        <div class="select-quantity-wrap">
+          <div class="quant-img-wrap">
+            <img src="../img/menu/menu1.jpg" alt="" />
+            <!-- <i class="fa-solid fa-plus ic-plus"></i> -->
+          </div>
+
+          <div class="info-quantity">
+            <div class="quant-info-txt">
+              <h4>프리미엄 피자</h4>
+              <p><span>14,500</span>원</p>
+            </div>
+            <div class="quantity-input-wrap">
+              <div class="one-input">
+                <a href="#" class="minus-amount">-</a>
+                <input type="text" value="0" class="amount" />
+                <a href="#" class="plus-amount">+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-quantity-wrap">
+          <div class="quant-img-wrap">
+            <img src="../img/menu/menu2.jpg" alt="" />
+          </div>
+          <div class="info-quantity">
+            <div class="quant-info-txt">
+              <h4>치즈 크러스트 피자</h4>
+              <p><span>15,500</span>원</p>
+            </div>
+            <div class="quantity-input-wrap">
+              <div class="one-input">
+                <a href="#" class="minus-amount">-</a>
+                <input type="text" value="0" class="amount" />
+                <a href="#" class="plus-amount">+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-quantity-wrap">
+          <div class="quant-img-wrap">
+            <img src="../img/menu/menu3.jpg" alt="" />
+          </div>
+          <div class="info-quantity">
+            <div class="quant-info-txt">
+              <h4>허니 고구마 피자</h4>
+              <p><span>14,500</span>원</p>
+            </div>
+            <div class="quantity-input-wrap">
+              <div class="one-input">
+                <a href="#" class="minus-amount">-</a>
+                <input type="text" value="0" class="amount" />
+                <a href="#" class="plus-amount">+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-quantity-wrap">
+          <div class="quant-img-wrap">
+            <img src="../img/menu/menu4.jpg" alt="" />
+          </div>
+          <div class="info-quantity">
+            <div class="quant-info-txt">
+              <h4>프리미엄 불고기 피자</h4>
+              <p><span>15,500</span>원</p>
+            </div>
+            <div class="quantity-input-wrap">
+              <div class="one-input">
+                <a href="#" class="minus-amount">-</a>
+                <input type="text" value="0" class="amount" />
+                <a href="#" class="plus-amount">+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-quantity-wrap">
+          <div class="quant-img-wrap">
+            <img src="../img/menu/menu5.jpg" alt="" />
+          </div>
+          <div class="info-quantity">
+            <div class="quant-info-txt">
+              <h4>한우 불고기 피자</h4>
+              <p><span>16,500</span>원</p>
+            </div>
+            <div class="quantity-input-wrap">
+              <div class="one-input">
+                <a href="#" class="minus-amount">-</a>
+                <input type="text" value="0" class="amount" />
+                <a href="#" class="plus-amount">+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="total-amount">총 주문 수량 : <span>0</span>판 주문하기</div>
+      </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

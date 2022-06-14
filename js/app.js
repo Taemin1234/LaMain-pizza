@@ -39,7 +39,7 @@ $(function () {
       $("footer").hide();
     });
 
-  $(".call-calendar, .call-calender-tab").on("click", function () {
+  $(".call-calendar, .call-calendar-tab").on("click", function () {
     $(".reserv-page").show();
     $(".main-contents").hide();
     $("footer").hide();
@@ -96,7 +96,7 @@ $(function () {
 // 수량 증가, 감소
 $(function () {
   $(this)
-    .find(".minus-amount")
+    .find(".select-quantity-page .minus-amount")
     .on("click", function (e) {
       e.preventDefault();
       var stat = $(this).siblings(".amount").val();
@@ -112,7 +112,7 @@ $(function () {
     });
 
   $(this)
-    .find(".plus-amount")
+    .find(".select-quantity-page .plus-amount")
     .on("click", function (e) {
       e.preventDefault();
       var stat = $(this).siblings(".amount").val();
@@ -153,11 +153,42 @@ $(function () {
 
       $(this).parents().children(".one-input").children(".amount").val(num);
     });
+});
 
-  $(".amount").on("change", function () {
-    console.log(1);
-    //$(".total-amount span").val("50");
-  });
+// 샘플주문 하기
+
+$(function () {
+  $(this)
+    .find(".sample-order-wrap .minus-amount")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this).siblings(".amount").val();
+      var num = parseInt(stat, 10);
+      num--;
+
+      if (num <= -1) {
+        alert("최소 수량은 0입니다.");
+        num = 0;
+      }
+
+      $(this).siblings(".amount").val(num);
+    });
+
+  $(this)
+    .find(".sample-order-wrap .plus-amount")
+    .on("click", function (e) {
+      e.preventDefault();
+      var stat = $(this).siblings(".amount").val();
+      var num = parseInt(stat, 10);
+      num++;
+
+      if (num > 3) {
+        alert("최대 주문 수량은 3개입니다.");
+        num = 0;
+      }
+
+      $(this).siblings(".amount").val(num);
+    });
 });
 
 // 내 예약 현황 보기

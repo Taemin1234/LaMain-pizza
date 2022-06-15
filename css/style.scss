@@ -341,6 +341,10 @@ header {
   }
 }
 
+.active {
+  border-bottom: solid 4px $theme-color;
+}
+
 .menu-wrap {
   @extend %flex-end;
 
@@ -1317,8 +1321,8 @@ header {
   }
 
   .quant-img-wrap {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 110px;
   }
 
   .info-quantity {
@@ -1612,8 +1616,10 @@ header {
     font-size: 16px;
   }
 
-  #myform fieldset {
-    width: auto;
+  .container-checkbox {
+    #myform fieldset {
+      width: auto;
+    }
   }
 
   #myform label {
